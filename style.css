@@ -17,27 +17,73 @@ body {
     margin: auto;
 }
 
+
+/* Header */
+
 .hero {
     background: linear-gradient(135deg, #0b3d91, #2563eb);
     color: white;
-    padding: 70px 20px;
     text-align: center;
+    padding: 60px 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: 45px;
-    margin-bottom: 10px;
+    font-size: 42px;
 }
 
 .hero h2 {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 400;
+    margin: 10px 0;
 }
 
-.hero p {
-    margin-top: 10px;
+
+/* Buttons */
+
+.buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
+.btn {
+    text-decoration: none;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.cv {
+    background: #0f172a;
+}
+
+.linkedin {
+    background: #0a66c2;
+}
+
+.whatsapp {
+    background: #25d366;
+}
+
+
+/* Cards */
 
 .card {
     background: white;
@@ -47,50 +93,54 @@ body {
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
-
 .card h2,
 .title {
     color: #0b3d91;
     margin-bottom: 20px;
 }
 
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-
-.skill {
-    text-align: center;
-    font-weight: 600;
-    color: #0b3d91;
-    transition: 0.3s;
-}
-
-
-.skill:hover {
-    transform: translateY(-5px);
-    background: #eaf2ff;
-}
-
-
 h3 {
     color: #2563eb;
     margin-bottom: 10px;
 }
 
+h4 {
+    margin-bottom: 8px;
+}
+
+
+/* Skills Grid */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 20px;
+}
+
+.skill {
+    text-align: center;
+    font-weight: bold;
+    color: #0b3d91;
+}
+
+.skill:hover {
+    background: #e8f0ff;
+    transform: translateY(-5px);
+}
+
+
+/* Lists */
 
 ul {
     padding-left: 25px;
 }
 
-
 li {
     margin-bottom: 8px;
 }
 
+
+/* Footer */
 
 footer {
     margin-top: 50px;
@@ -105,6 +155,14 @@ footer {
 
 @media(max-width:768px){
 
+    .container {
+        width: 94%;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
     .hero h1 {
         font-size: 32px;
     }
@@ -113,8 +171,28 @@ footer {
         font-size: 20px;
     }
 
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 90%;
+        text-align: center;
+    }
+
     .card {
         padding: 20px;
+        margin-top: 20px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
     }
 
 }
