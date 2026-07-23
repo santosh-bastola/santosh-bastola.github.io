@@ -14,7 +14,7 @@ body{
 
     font-family:'Segoe UI', Arial, sans-serif;
     background:#f4f7fb;
-    color:#333;
+    color:#334155;
     line-height:1.7;
 
 }
@@ -82,8 +82,6 @@ body{
 
 
 
-
-
 /* HERO */
 
 
@@ -92,8 +90,8 @@ body{
     min-height:85vh;
 
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
 
     text-align:center;
 
@@ -108,11 +106,10 @@ body{
 }
 
 
-
 .hero-content{
 
     width:90%;
-    max-width:800px;
+    max-width:850px;
 
 }
 
@@ -138,7 +135,7 @@ body{
 .hero h1{
 
     font-size:45px;
-    margin-bottom:10px;
+    margin-bottom:8px;
 
 }
 
@@ -162,11 +159,30 @@ body{
 
 
 
+.experience-badge{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:8px 22px;
+
+    background:white;
+
+    color:#2563eb;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+}
 
 
 
 
-/* SECTION */
+
+
+/* COMMON SECTION */
 
 
 .section{
@@ -177,7 +193,6 @@ body{
     margin:60px auto;
 
 }
-
 
 
 .section-title{
@@ -194,11 +209,6 @@ body{
 
 
 
-
-
-
-
-/* CARD */
 
 
 .card{
@@ -224,39 +234,6 @@ body{
     margin-bottom:20px;
 
 }
-
-
-
-.card h3{
-
-    color:#0f172a;
-
-}
-
-
-
-.card h4{
-
-    color:#475569;
-
-    margin-top:5px;
-
-}
-
-
-
-.card hr{
-
-    margin:25px 0;
-
-    border:none;
-
-    border-top:1px solid #ddd;
-
-}
-
-
-
 
 
 
@@ -313,103 +290,94 @@ body{
 
 
 
+/* EXPERIENCE CARDS */
 
 
+.experience-grid{
 
-/* EXPERIENCE TIMELINE */
+    display:grid;
 
+    grid-template-columns:repeat(2,1fr);
 
-.timeline{
-
-    position:relative;
-
-    max-width:900px;
-
-    margin:40px auto;
+    gap:25px;
 
 }
 
 
 
-.timeline::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:20px;
-
-    top:0;
-
-    width:4px;
-
-    height:100%;
-
-    background:#2563eb;
-
-}
-
-
-
-.timeline-item{
-
-    position:relative;
-
-    margin-bottom:35px;
-
-    padding-left:65px;
-
-}
-
-
-
-.timeline-item::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:8px;
-
-    top:25px;
-
-    width:25px;
-
-    height:25px;
-
-    background:#2563eb;
-
-    border-radius:50%;
-
-    border:5px solid white;
-
-    box-shadow:
-
-    0 0 0 3px #2563eb;
-
-}
-
-
-
-.timeline-content{
+.experience-card{
 
     background:white;
 
     padding:25px;
 
-    border-radius:18px;
+    border-radius:20px;
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:flex-start;
 
     box-shadow:
 
     0 10px 25px rgba(0,0,0,0.08);
 
+    transition:.3s;
+
 }
 
 
 
-.timeline-content h3{
+.experience-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+.company-badge{
+
+    min-width:80px;
+
+    height:80px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border-radius:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    font-weight:700;
+
+    font-size:14px;
+
+}
+
+
+
+.experience-card h3{
 
     color:#2563eb;
+
+    margin:8px 0;
+
+}
+
+
+
+.experience-card h4{
+
+    color:#0f172a;
 
 }
 
@@ -419,9 +387,9 @@ body{
 
     color:#64748b;
 
-    font-weight:700;
+    font-size:14px;
 
-    margin-bottom:10px;
+    font-weight:700;
 
 }
 
@@ -432,8 +400,7 @@ body{
 
 
 
-
-/* BUTTONS */
+/* CONTACT BUTTONS */
 
 
 .buttons{
@@ -480,8 +447,6 @@ body{
 
     transform:translateY(-4px);
 
-    opacity:.9;
-
 }
 
 
@@ -522,8 +487,6 @@ body{
 
 
 
-
-
 /* FOOTER */
 
 
@@ -545,13 +508,10 @@ footer{
 
 
 
-
-
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 
 
 @media(max-width:768px){
-
 
 
 .nav-container{
@@ -559,7 +519,6 @@ footer{
     flex-direction:column;
 
 }
-
 
 
 .nav-menu{
@@ -610,6 +569,26 @@ footer{
 
 
 
+.experience-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.experience-card{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    align-items:center;
+
+}
+
+
+
 .section{
 
     width:92%;
@@ -621,31 +600,6 @@ footer{
 .card{
 
     padding:22px;
-
-}
-
-
-
-
-.timeline::before{
-
-    left:15px;
-
-}
-
-
-
-.timeline-item{
-
-    padding-left:50px;
-
-}
-
-
-
-.timeline-item::before{
-
-    left:3px;
 
 }
 
