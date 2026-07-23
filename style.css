@@ -422,8 +422,7 @@ body{
 
 
 
-/* BUTTONS */
-
+/* CONTACT BUTTONS */
 
 .buttons{
 
@@ -457,11 +456,37 @@ body{
 
     align-items:center;
 
+    justify-content:center;
+
     gap:8px;
+
+    transition:0.3s;
+
+    font-size:15px;
 
 }
 
 
+
+.btn i{
+
+    font-size:18px;
+
+}
+
+
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+    opacity:0.9;
+
+}
+
+
+
+/* Button Colors */
 
 .cv{
 
@@ -482,6 +507,22 @@ body{
 .whatsapp{
 
     background:#16a34a;
+
+}
+
+
+
+.email{
+
+    background:#2563eb;
+
+}
+
+
+
+.call{
+
+    background:#059669;
 
 }
 
