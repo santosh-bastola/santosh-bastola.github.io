@@ -31,9 +31,10 @@ body {
     width: 150px;
     height: 150px;
     object-fit: cover;
+    display: block;
     border-radius: 50%;
     border: 5px solid white;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
 }
 
 .hero h1 {
