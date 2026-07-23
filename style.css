@@ -2,198 +2,451 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", Arial, sans-serif;
 }
+
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 body {
-    background: #f3f6fb;
+
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f5f7fb;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.7;
+
 }
 
-.container {
+
+.navbar {
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #0f172a;
+    padding: 15px 0;
+
+}
+
+
+.nav-container {
+
     width: 90%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 
-/* Header */
+.logo {
+
+    color: white;
+    font-size: 22px;
+
+}
+
+
+
+.nav-menu {
+
+    list-style: none;
+    display: flex;
+    gap: 25px;
+
+}
+
+
+.nav-menu a {
+
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+
+.nav-menu a:hover {
+
+    color: #38bdf8;
+
+}
+
+
+
+
 
 .hero {
-    background: linear-gradient(135deg, #0b3d91, #2563eb);
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-}
 
-.profile-img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    display: block;
-    border-radius: 50%;
-    border: 5px solid white;
-    margin: 0 auto 20px;
-}
-
-.hero h1 {
-    font-size: 42px;
-}
-
-.hero h2 {
-    font-size: 24px;
-    font-weight: 400;
-    margin: 10px 0;
-}
-
-
-/* Buttons */
-
-.buttons {
-    margin-top: 25px;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e40af
+    );
+
+    color:white;
+
 }
+
+
+.hero-content {
+
+    width:90%;
+    max-width:800px;
+
+}
+
+
+
+.profile-img {
+
+    width:170px;
+    height:170px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid white;
+    margin-bottom:20px;
+
+}
+
+
+
+.hero h1 {
+
+    font-size:45px;
+
+}
+
+
+.hero h2 {
+
+    margin:10px 0;
+    font-weight:500;
+
+}
+
+
+
+.tagline {
+
+    font-size:18px;
+    margin:15px 0;
+
+}
+
+
+
+
+
+.buttons {
+
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+
+}
+
+
 
 .btn {
-    text-decoration: none;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: 0.3s;
+
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+
 }
 
-.btn:hover {
-    transform: translateY(-3px);
-}
+
 
 .cv {
-    background: #0f172a;
+
+    background:#16a34a;
+
 }
+
 
 .linkedin {
-    background: #0a66c2;
+
+    background:#0077b5;
+
 }
+
 
 .whatsapp {
-    background: #25d366;
+
+    background:#25d366;
+
 }
 
 
-/* Cards */
+
+.btn:hover {
+
+    transform:translateY(-3px);
+    opacity:.9;
+
+}
+
+
+
+
+
+.section {
+
+    width:90%;
+    max-width:1200px;
+    margin:60px auto;
+
+}
+
+
+
+.section-title {
+
+    text-align:center;
+    font-size:32px;
+    margin-bottom:35px;
+
+}
+
+
+
 
 .card {
-    background: white;
-    margin-top: 35px;
-    padding: 30px;
-    border-radius: 18px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-}
 
-.card h2,
-.title {
-    color: #0b3d91;
-    margin-bottom: 20px;
-}
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    margin-bottom:30px;
 
-h3 {
-    color: #2563eb;
-    margin-bottom: 10px;
-}
-
-h4 {
-    margin-bottom: 8px;
 }
 
 
-/* Skills Grid */
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap: 20px;
-}
+.card h2 {
 
-.skill {
-    text-align: center;
-    font-weight: bold;
-    color: #0b3d91;
-}
+    color:#1e40af;
+    margin-bottom:20px;
 
-.skill:hover {
-    background: #e8f0ff;
-    transform: translateY(-5px);
 }
 
 
-/* Lists */
+.card ul {
 
-ul {
-    padding-left: 25px;
-}
+    padding-left:20px;
 
-li {
-    margin-bottom: 8px;
 }
 
 
-/* Footer */
+
+.card li {
+
+    margin-bottom:8px;
+
+}
+
+
+
+
+
+.stats-container {
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+
+}
+
+
+
+.stat-card {
+
+    background:white;
+    text-align:center;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+.stat-card h2 {
+
+    font-size:40px;
+    color:#1e40af;
+
+}
+
+
+
+
+.skills-grid {
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+
+}
+
+
+
+.skill-card {
+
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    font-weight:600;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+
+
+.skill-card:hover {
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+
+
+.timeline {
+
+    border-left:4px solid #2563eb;
+    padding-left:30px;
+
+}
+
+
+
+.timeline-item {
+
+    margin-bottom:40px;
+
+}
+
+
+
+.timeline-content {
+
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+
+.timeline-content h3 {
+
+    color:#1e40af;
+
+}
+
+
+
+
+
 
 footer {
-    margin-top: 50px;
-    background: #0b3d91;
-    color: white;
-    text-align: center;
-    padding: 25px;
+
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+
 }
 
 
-/* Mobile Responsive */
+
+
+
 
 @media(max-width:768px){
 
-    .container {
-        width: 94%;
-    }
 
-    .hero {
-        padding: 40px 15px;
-    }
 
-    .hero h1 {
-        font-size: 32px;
-    }
+.nav-container {
 
-    .hero h2 {
-        font-size: 20px;
-    }
+    flex-direction:column;
 
-    .profile-img {
-        width: 120px;
-        height: 120px;
-    }
+}
 
-    .buttons {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .btn {
-        width: 90%;
-        text-align: center;
-    }
+.nav-menu {
 
-    .card {
-        padding: 20px;
-        margin-top: 20px;
-    }
+    margin-top:15px;
+    flex-wrap:wrap;
+    justify-content:center;
 
-    .grid {
-        grid-template-columns: 1fr;
-    }
+}
+
+
+
+.hero h1 {
+
+    font-size:32px;
+
+}
+
+
+
+.stats-container {
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+
+
+.skills-grid {
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.profile-img {
+
+    width:140px;
+    height:140px;
+
+}
+
+
+.timeline {
+
+    padding-left:15px;
+
+}
+
+
+.card {
+
+    padding:20px;
+
+}
+
 
 }
