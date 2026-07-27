@@ -1,199 +1,594 @@
-/* ==========================================================================
-   EXECUTIVE COMMAND CENTER INTERACTION CONTROLLER
-   Santosh Bastola — Portfolio Script
-   ========================================================================== */
+/* =========================================
+   SANTOSH BASTOLA
+   EXECUTIVE COMMAND CENTER
+   MAIN JAVASCRIPT
+========================================= */
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Lucide Icons
-    if (typeof lucide !== 'undefined') {
+
+/* =========================================
+   DOM ELEMENTS
+========================================= */
+
+const html = document.documentElement;
+
+const themeToggle = document.getElementById("themeToggle");
+
+const mobileToggle = document.getElementById("mobileToggle");
+
+const navLinks = document.querySelector(".nav-links");
+
+const navItems = document.querySelectorAll(".nav-links a");
+
+const sections = document.querySelectorAll("main section[id]");
+
+
+/* =========================================
+   THEME MANAGEMENT
+========================================= */
+
+const savedTheme = localStorage.getItem("portfolio-theme");
+
+if (savedTheme) {
+
+    html.setAttribute("data-theme", savedTheme);
+
+}
+
+
+function updateThemeIcon() {
+
+    if (!themeToggle) return;
+
+    const currentTheme = html.getAttribute("data-theme");
+
+    themeToggle.innerHTML = currentTheme === "dark"
+
+        ? `<i data-lucide="sun"></i>`
+
+        : `<i data-lucide="moon"></i>`;
+
+    if (window.lucide) {
+
         lucide.createIcons();
+
     }
 
-    /* ----------------------------------------------------------------------
-       1. Profile Image Fallback (Auto Placeholder if photo missing)
-       ---------------------------------------------------------------------- */
-    const profileImg = document.getElementById('profileImage');
-    if (profileImg) {
-        profileImg.addEventListener('error', function() {
-            this.src = 'https://ui-avatars.com/api/?name=Santosh+Bastola&background=0D1424&color=38BDF8&size=512&font-size=0.33&bold=true';
-        });
-    }
+}
 
-    /* ----------------------------------------------------------------------
-       2. Theme Toggle System (Command Mode vs. Executive Mode)
-       ---------------------------------------------------------------------- */
-    const themeToggleBtn = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    const htmlElement = document.documentElement;
 
-    const savedTheme = localStorage.getItem('exec_portfolio_theme') || 'dark';
-    htmlElement.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
+if (themeToggle) {
 
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
-            const currentTheme = htmlElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            htmlElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('exec_portfolio_theme', newTheme);
-            updateThemeIcon(newTheme);
-        });
-    }
+    themeToggle.addEventListener("click", () => {
 
-    function updateThemeIcon(theme) {
-        if (!themeIcon) return;
-        if (theme === 'light') {
-            themeIcon.setAttribute('data-lucide', 'moon');
-        } else {
-            themeIcon.setAttribute('data-lucide', 'sun');
-        }
-        if (typeof lucide !== 'undefined') {
-            lucide.createIcons();
-        }
-    }
+        const currentTheme = html.getAttribute("data-theme");
 
-    /* ----------------------------------------------------------------------
-       3. Sticky Navigation & Active Link Highlighting
-       ---------------------------------------------------------------------- */
-    const header = document.querySelector('header');
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a');
+        const newTheme =
+            currentTheme === "dark"
+                ? "light"
+                : "dark";
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.boxShadow = '0 10px 30px -10px rgba(0,0,0,0.3)';
-        } else {
-            header.style.boxShadow = 'none';
-        }
-        highlightActiveNav();
+
+        html.setAttribute(
+            "data-theme",
+            newTheme
+        );
+
+
+        localStorage.setItem(
+            "portfolio-theme",
+            newTheme
+        );
+
+
+        updateThemeIcon();
+
     });
 
-    function highlightActiveNav() {
-        const scrollY = window.pageYOffset;
+}
 
-        sections.forEach(current => {
-            const sectionHeight = current.offsetHeight;
-            const sectionTop = current.offsetTop - 100;
-            const sectionId = current.getAttribute('id');
 
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-        });
-    }
+updateThemeIcon();
 
-    /* ----------------------------------------------------------------------
-       4. Mobile Navigation Menu Toggle
-       ---------------------------------------------------------------------- */
-    const mobileToggle = document.querySelector('.mobile-toggle');
-    const navMenu = document.querySelector('.nav-links');
 
-    if (mobileToggle && navMenu) {
-        mobileToggle.addEventListener('click', () => {
-            const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
-            mobileToggle.setAttribute('aria-expanded', !isExpanded);
-            
-            if (isExpanded) {
-                navMenu.style.display = 'none';
-            } else {
-                navMenu.style.display = 'flex';
-                navMenu.style.flexDirection = 'column';
-                navMenu.style.position = 'absolute';
-                navMenu.style.top = '80px';
-                navMenu.style.left = '0';
-                navMenu.style.right = '0';
-                navMenu.style.background = 'var(--nav-bg)';
-                navMenu.style.padding = '1.5rem';
-                navMenu.style.borderBottom = '1px solid var(--bg-card-border)';
-            }
-        });
+/* =========================================
+   MOBILE MENU
+========================================= */
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    navMenu.style.display = 'none';
-                    if (mobileToggle) {
-                        mobileToggle.setAttribute('aria-expanded', 'false');
-                    }
-                }
+if (mobileToggle && navLinks) {
+
+    mobileToggle.addEventListener("click", () => {
+
+        navLinks.classList.toggle("active");
+
+
+        const isOpen =
+            navLinks.classList.contains("active");
+
+
+        mobileToggle.innerHTML = isOpen
+
+            ? `<i data-lucide="x"></i>`
+
+            : `<i data-lucide="menu"></i>`;
+
+
+        if (window.lucide) {
+
+            lucide.createIcons();
+
+        }
+
+    });
+
+}
+
+
+/* =========================================
+   CLOSE MOBILE MENU
+========================================= */
+
+navItems.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        if (!navLinks) return;
+
+
+        navLinks.classList.remove("active");
+
+
+        if (mobileToggle) {
+
+            mobileToggle.innerHTML =
+                `<i data-lucide="menu"></i>`;
+
+        }
+
+
+        if (window.lucide) {
+
+            lucide.createIcons();
+
+        }
+
+    });
+
+});
+
+
+/* =========================================
+   ACTIVE NAVIGATION
+========================================= */
+
+const observerOptions = {
+
+    root: null,
+
+    rootMargin: "-35% 0px -55% 0px",
+
+    threshold: 0
+
+};
+
+
+const sectionObserver = new IntersectionObserver(
+
+    entries => {
+
+        entries.forEach(entry => {
+
+            if (!entry.isIntersecting) return;
+
+
+            const currentSection =
+                entry.target.getAttribute("id");
+
+
+            navItems.forEach(link => {
+
+                link.classList.remove("active");
+
             });
+
+
+            const activeLink =
+                document.querySelector(
+                    `.nav-links a[href="#${currentSection}"]`
+                );
+
+
+            if (activeLink) {
+
+                activeLink.classList.add("active");
+
+            }
+
         });
+
+    },
+
+    observerOptions
+
+);
+
+
+sections.forEach(section => {
+
+    sectionObserver.observe(section);
+
+});
+
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+const revealElements = document.querySelectorAll(
+
+    ".value-card, " +
+
+    ".career-item, " +
+
+    ".expertise-card, " +
+
+    ".system-card, " +
+
+    ".education-card, " +
+
+    ".impact-item"
+
+);
+
+
+const revealObserver = new IntersectionObserver(
+
+    entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("visible");
+
+                revealObserver.unobserve(
+                    entry.target
+                );
+
+            }
+
+        });
+
+    },
+
+    {
+
+        threshold: 0.12,
+
+        rootMargin: "0px 0px -40px 0px"
+
     }
 
-    /* ----------------------------------------------------------------------
-       5. Scroll Reveal Animations
-       ---------------------------------------------------------------------- */
-    const revealElements = document.querySelectorAll(
-        '.value-card, .timeline-item, .expertise-card, .impact-card, .erp-card, .edu-card'
+);
+
+
+revealElements.forEach(element => {
+
+    element.classList.add("reveal");
+
+    revealObserver.observe(element);
+
+});
+
+
+/* =========================================
+   HEADER SCROLL EFFECT
+========================================= */
+
+const header =
+    document.querySelector(".site-header");
+
+
+let lastScroll = 0;
+
+
+window.addEventListener(
+
+    "scroll",
+
+    () => {
+
+        const currentScroll =
+            window.scrollY;
+
+
+        if (!header) return;
+
+
+        if (currentScroll > 40) {
+
+            header.classList.add(
+                "scrolled"
+            );
+
+        } else {
+
+            header.classList.remove(
+                "scrolled"
+            );
+
+        }
+
+
+        lastScroll =
+            currentScroll;
+
+    },
+
+    { passive: true }
+
+);
+
+
+/* =========================================
+   CURRENT YEAR
+========================================= */
+
+const currentYear =
+    document.querySelector(
+        "#currentYear"
     );
 
-    revealElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-    });
 
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
-    });
+if (currentYear) {
 
-    revealElements.forEach(el => revealObserver.observe(el));
+    currentYear.textContent =
+        new Date().getFullYear();
 
-    /* ----------------------------------------------------------------------
-       6. Executive Metric Counter Animation
-       ---------------------------------------------------------------------- */
-    const impactNumbers = document.querySelectorAll('.impact-number');
-    let animated = false;
+}
 
-    const countObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !animated) {
-                animated = true;
-                impactNumbers.forEach(num => {
-                    const textContent = num.textContent.trim();
-                    const value = parseInt(textContent.replace(/\D/g, ''));
-                    const prefix = textContent.match(/^\D+/) ? textContent.match(/^\D+/)[0] : '';
-                    const suffix = textContent.match(/\D+$/) ? textContent.match(/\D+$/)[0] : '';
 
-                    if (!isNaN(value)) {
-                        animateCounter(num, 0, value, 1500, prefix, suffix);
-                    }
-                });
-            }
-        });
-    }, { threshold: 0.5 });
+/* =========================================
+   SMOOTH ANCHOR SCROLL
+========================================= */
 
-    const impactSection = document.getElementById('impact');
-    if (impactSection) {
-        countObserver.observe(impactSection);
-    }
+document.querySelectorAll(
+    'a[href^="#"]'
+).forEach(anchor => {
 
-    function animateCounter(element, start, end, duration, prefix = '', suffix = '') {
-        let startTimestamp = null;
-        const step = (timestamp) => {
-            if (!startTimestamp) startTimestamp = timestamp;
-            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            const currentVal = Math.floor(progress * (end - start) + start);
-            element.textContent = `${prefix}${currentVal}${suffix}`;
-            if (progress < 1) {
-                window.requestAnimationFrame(step);
-            }
-        };
-        window.requestAnimationFrame(step);
-    }
+    anchor.addEventListener(
+        "click",
+        function (event) {
+
+            const targetId =
+                this.getAttribute(
+                    "href"
+                );
+
+
+            if (
+                !targetId ||
+                targetId === "#"
+            ) return;
+
+
+            const target =
+                document.querySelector(
+                    targetId
+                );
+
+
+            if (!target) return;
+
+
+            event.preventDefault();
+
+
+            const headerHeight =
+                header
+                    ? header.offsetHeight
+                    : 0;
+
+
+            const targetPosition =
+                target.getBoundingClientRect()
+                    .top +
+
+                window.scrollY -
+
+                headerHeight;
+
+
+            window.scrollTo({
+
+                top: targetPosition,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    );
+
 });
+
+
+/* =========================================
+   CARD MOUSE INTERACTION
+========================================= */
+
+const interactiveCards =
+    document.querySelectorAll(
+
+        ".value-card, " +
+
+        ".expertise-card, " +
+
+        ".system-card, " +
+
+        ".education-card"
+
+    );
+
+
+interactiveCards.forEach(card => {
+
+    card.addEventListener(
+        "mousemove",
+        event => {
+
+            const rect =
+                card.getBoundingClientRect();
+
+
+            const x =
+                event.clientX -
+                rect.left;
+
+
+            const y =
+                event.clientY -
+                rect.top;
+
+
+            card.style.setProperty(
+                "--mouse-x",
+                `${x}px`
+            );
+
+
+            card.style.setProperty(
+                "--mouse-y",
+                `${y}px`
+            );
+
+        }
+
+    );
+
+
+    card.addEventListener(
+        "mouseleave",
+        () => {
+
+            card.style.removeProperty(
+                "--mouse-x"
+            );
+
+
+            card.style.removeProperty(
+                "--mouse-y"
+            );
+
+        }
+
+    );
+
+});
+
+
+/* =========================================
+   KEYBOARD ACCESSIBILITY
+========================================= */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.key === "Escape" &&
+            navLinks &&
+            navLinks.classList.contains(
+                "active"
+            )
+        ) {
+
+            navLinks.classList.remove(
+                "active"
+            );
+
+
+            if (mobileToggle) {
+
+                mobileToggle.innerHTML =
+                    `<i data-lucide="menu"></i>`;
+
+            }
+
+
+            if (window.lucide) {
+
+                lucide.createIcons();
+
+            }
+
+        }
+
+    }
+
+);
+
+
+/* =========================================
+   RESIZE HANDLING
+========================================= */
+
+window.addEventListener(
+
+    "resize",
+
+    () => {
+
+        if (
+
+            window.innerWidth > 800 &&
+
+            navLinks
+
+        ) {
+
+            navLinks.classList.remove(
+                "active"
+            );
+
+
+            if (mobileToggle) {
+
+                mobileToggle.innerHTML =
+                    `<i data-lucide="menu"></i>`;
+
+            }
+
+
+            if (window.lucide) {
+
+                lucide.createIcons();
+
+            }
+
+        }
+
+    }
+
+);
+
+
+/* =========================================
+   INITIALIZE ICONS
+========================================= */
+
+document.addEventListener(
+
+    "DOMContentLoaded",
+
+    () => {
+
+        if (window.lucide) {
+
+            lucide.createIcons();
+
+        }
+
+    }
+
+);
