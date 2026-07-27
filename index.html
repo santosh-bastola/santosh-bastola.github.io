@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color" content="#07111f">
+    <meta name="theme-color"
+        content="#07111f">
 
-    <meta name="author" content="Santosh Bastola">
+    <meta name="author"
+        content="Santosh Bastola">
 
     <meta name="description"
         content="Santosh Bastola — Procurement & Inventory Management Professional with 10+ years of experience in Procurement, Inventory Management, Supply Chain, Logistics, Vendor Management, SAP MM and SAP PP.">
@@ -17,12 +20,33 @@
     <meta name="keywords"
         content="Santosh Bastola, Procurement Manager, Inventory Manager, Procurement & Inventory Management, Supply Chain, SAP MM, SAP PP, Vendor Management, Logistics, Nepal">
 
-    <title>
-        Santosh Bastola | Procurement & Inventory Management Professional
-    </title>
+    <meta name="robots"
+        content="index, follow">
 
 
-    <!-- Google Fonts -->
+    <!-- Open Graph -->
+
+    <meta property="og:title"
+        content="Santosh Bastola | Procurement & Inventory Management Professional">
+
+    <meta property="og:description"
+        content="Procurement & Inventory Management Professional with 10+ years of experience in procurement, inventory, supply chain, logistics and SAP.">
+
+    <meta property="og:type"
+        content="website">
+
+    <meta property="og:image"
+        content="og-image.jpg">
+
+
+    <!-- Favicon -->
+
+    <link rel="icon"
+        type="image/svg+xml"
+        href="favicon.svg">
+
+
+    <!-- Fonts -->
 
     <link rel="preconnect"
         href="https://fonts.googleapis.com">
@@ -41,7 +65,10 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 
-    <!-- Main CSS -->
+    <title>
+        Santosh Bastola | Procurement & Inventory Management Professional
+    </title>
+
 
     <link rel="stylesheet"
         href="style.css">
@@ -52,9 +79,13 @@
 <body>
 
 
-    <!-- =========================================
-         BACKGROUND ELEMENTS
-    ========================================== -->
+    <!-- Scroll Progress -->
+
+    <div class="scroll-progress"
+        id="scrollProgress"></div>
+
+
+    <!-- Background -->
 
     <div class="background-grid"></div>
 
@@ -63,17 +94,17 @@
     <div class="ambient-glow glow-two"></div>
 
 
-    <!-- =========================================
-         NAVIGATION
-    ========================================== -->
+    <!-- Navigation -->
 
-    <header class="navbar">
+    <header class="navbar"
+        id="navbar">
 
         <div class="nav-container">
 
 
             <a href="#home"
-                class="logo">
+                class="logo"
+                aria-label="Santosh Bastola Home">
 
                 <span class="logo-mark">
                     SB
@@ -86,7 +117,10 @@
             </a>
 
 
-            <nav class="nav-menu">
+            <nav class="nav-menu"
+                id="navMenu"
+                aria-label="Main Navigation">
+
 
                 <a href="#home"
                     class="nav-link active">
@@ -127,28 +161,46 @@
 
                 </a>
 
+
             </nav>
 
 
-            <a href="Santosh-Bastola-CV.pdf"
-                download
-                class="nav-cv">
-
-                <i class="fa-solid fa-arrow-down"></i>
-
-                <span>
-                    Download CV
-                </span>
-
-            </a>
+            <div class="nav-actions">
 
 
-            <button class="mobile-menu-btn"
-                aria-label="Open Navigation Menu">
+                <button class="theme-toggle"
+                    id="themeToggle"
+                    aria-label="Toggle dark and light mode">
 
-                <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-sun"></i>
 
-            </button>
+                </button>
+
+
+                <a href="Santosh-Bastola-CV.pdf"
+                    download
+                    class="nav-cv cv-download">
+
+                    <i class="fa-solid fa-arrow-down"></i>
+
+                    <span>
+                        Download CV
+                    </span>
+
+                </a>
+
+
+                <button class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open Navigation Menu"
+                    aria-expanded="false">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+            </div>
 
 
         </div>
@@ -159,9 +211,7 @@
     <main>
 
 
-        <!-- =========================================
-             HERO SECTION
-        ========================================== -->
+        <!-- HERO -->
 
         <section id="home"
             class="hero section-container">
@@ -170,7 +220,8 @@
             <div class="hero-content">
 
 
-                <div class="hero-intro">
+                <div class="hero-intro reveal">
+
 
                     <span class="eyebrow">
 
@@ -250,8 +301,8 @@
 
                         <div class="hero-stat">
 
-                            <strong>
-                                10+
+                            <strong data-counter="10">
+                                0+
                             </strong>
 
                             <span>
@@ -266,8 +317,8 @@
 
                         <div class="hero-stat">
 
-                            <strong>
-                                150+
+                            <strong data-counter="150">
+                                0+
                             </strong>
 
                             <span>
@@ -299,9 +350,7 @@
                 </div>
 
 
-                <!-- HERO VISUAL -->
-
-                <div class="hero-visual">
+                <div class="hero-visual reveal">
 
 
                     <div class="profile-orbit orbit-one"></div>
@@ -335,19 +384,22 @@
                         <div class="profile-image-wrapper">
 
                             <img src="profile.jpg"
-                                alt="Santosh Bastola"
-                                class="profile-img">
+                                alt="Professional portrait of Santosh Bastola"
+                                class="profile-img"
+                                loading="eager">
 
                         </div>
 
 
                         <div class="profile-card-bottom">
 
+
                             <div>
 
                                 <span>
                                     CURRENT ROLE
                                 </span>
+
 
                                 <strong>
                                     Procurement & Inventory Manager
@@ -361,6 +413,7 @@
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
 
                             </div>
+
 
                         </div>
 
@@ -425,15 +478,14 @@
         </section>
 
 
-        <!-- =========================================
-             ABOUT SECTION
-        ========================================== -->
+        <!-- ABOUT -->
 
         <section id="about"
             class="section section-container">
 
 
-            <div class="section-heading">
+            <div class="section-heading reveal">
+
 
                 <span class="section-number">
                     01
@@ -446,14 +498,19 @@
                         PROFESSIONAL PROFILE
                     </span>
 
+
                     <h2>
+
                         Built around
+
                         <span>
                             operational excellence.
                         </span>
+
                     </h2>
 
                 </div>
+
 
             </div>
 
@@ -461,7 +518,7 @@
             <div class="about-grid">
 
 
-                <div class="about-main glass-card">
+                <div class="about-main glass-card reveal">
 
 
                     <span class="card-label">
@@ -498,6 +555,7 @@
 
                     <div class="about-footer">
 
+
                         <span>
 
                             <i class="fa-solid fa-location-dot"></i>
@@ -515,6 +573,7 @@
 
                         </span>
 
+
                     </div>
 
 
@@ -524,7 +583,7 @@
                 <div class="about-highlights">
 
 
-                    <div class="highlight-card glass-card">
+                    <div class="highlight-card glass-card reveal">
 
                         <div class="highlight-icon">
 
@@ -548,7 +607,7 @@
                     </div>
 
 
-                    <div class="highlight-card glass-card">
+                    <div class="highlight-card glass-card reveal">
 
                         <div class="highlight-icon">
 
@@ -572,7 +631,7 @@
                     </div>
 
 
-                    <div class="highlight-card glass-card">
+                    <div class="highlight-card glass-card reveal">
 
                         <div class="highlight-icon">
 
@@ -596,7 +655,7 @@
                     </div>
 
 
-                    <div class="highlight-card glass-card">
+                    <div class="highlight-card glass-card reveal">
 
                         <div class="highlight-icon">
 
@@ -629,15 +688,14 @@
         </section>
 
 
-        <!-- =========================================
-             SKILLS SECTION
-        ========================================== -->
+        <!-- SKILLS -->
 
         <section id="skills"
             class="section section-container">
 
 
-            <div class="section-heading">
+            <div class="section-heading reveal">
+
 
                 <span class="section-number">
                     02
@@ -650,14 +708,19 @@
                         CORE EXPERTISE
                     </span>
 
+
                     <h2>
+
                         The systems behind
+
                         <span>
                             the operation.
                         </span>
+
                     </h2>
 
                 </div>
+
 
             </div>
 
@@ -665,7 +728,7 @@
             <div class="skills-grid">
 
 
-                <div class="skill-card glass-card">
+                <div class="skill-card glass-card reveal">
 
                     <div class="skill-number">
                         01
@@ -696,7 +759,7 @@
                 </div>
 
 
-                <div class="skill-card glass-card">
+                <div class="skill-card glass-card reveal">
 
                     <div class="skill-number">
                         02
@@ -727,7 +790,7 @@
                 </div>
 
 
-                <div class="skill-card glass-card">
+                <div class="skill-card glass-card reveal">
 
                     <div class="skill-number">
                         03
@@ -758,7 +821,7 @@
                 </div>
 
 
-                <div class="skill-card glass-card">
+                <div class="skill-card glass-card reveal">
 
                     <div class="skill-number">
                         04
@@ -789,7 +852,7 @@
                 </div>
 
 
-                <div class="skill-card glass-card">
+                <div class="skill-card glass-card reveal">
 
                     <div class="skill-number">
                         05
@@ -820,7 +883,7 @@
                 </div>
 
 
-                <div class="skill-card glass-card">
+                <div class="skill-card glass-card reveal">
 
                     <div class="skill-number">
                         06
@@ -851,7 +914,7 @@
                 </div>
 
 
-                <div class="skill-card glass-card">
+                <div class="skill-card glass-card reveal">
 
                     <div class="skill-number">
                         07
@@ -882,7 +945,7 @@
                 </div>
 
 
-                <div class="skill-card glass-card">
+                <div class="skill-card glass-card reveal">
 
                     <div class="skill-number">
                         08
@@ -919,15 +982,14 @@
         </section>
 
 
-        <!-- =========================================
-             EXPERIENCE SECTION
-        ========================================== -->
+        <!-- EXPERIENCE -->
 
         <section id="experience"
             class="section section-container">
 
 
-            <div class="section-heading">
+            <div class="section-heading reveal">
+
 
                 <span class="section-number">
                     03
@@ -940,14 +1002,19 @@
                         CAREER JOURNEY
                     </span>
 
+
                     <h2>
+
                         A decade of
+
                         <span>
                             professional growth.
                         </span>
+
                     </h2>
 
                 </div>
+
 
             </div>
 
@@ -955,7 +1022,7 @@
             <div class="timeline">
 
 
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
 
 
                     <div class="timeline-marker">
@@ -1044,7 +1111,7 @@
                 </div>
 
 
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
 
 
                     <div class="timeline-marker">
@@ -1128,7 +1195,7 @@
                 </div>
 
 
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
 
 
                     <div class="timeline-marker">
@@ -1216,7 +1283,7 @@
                 </div>
 
 
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
 
 
                     <div class="timeline-marker">
@@ -1306,15 +1373,13 @@
         </section>
 
 
-        <!-- =========================================
-             CONTACT SECTION
-        ========================================== -->
+        <!-- CONTACT -->
 
         <section id="contact"
             class="section section-container contact-section">
 
 
-            <div class="contact-wrapper glass-card">
+            <div class="contact-wrapper glass-card reveal">
 
 
                 <div class="contact-intro">
@@ -1468,7 +1533,7 @@
 
                     <a href="Santosh-Bastola-CV.pdf"
                         download
-                        class="contact-cv-btn">
+                        class="contact-cv-btn cv-download">
 
                         <i class="fa-solid fa-file-arrow-down"></i>
 
@@ -1489,9 +1554,7 @@
     </main>
 
 
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
+    <!-- FOOTER -->
 
     <footer class="footer">
 
@@ -1529,7 +1592,8 @@
 
 
             <a href="#home"
-                class="back-to-top">
+                class="back-to-top"
+                aria-label="Back to top">
 
                 <i class="fa-solid fa-arrow-up"></i>
 
@@ -1540,6 +1604,11 @@
 
 
     </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
 
 
 </body>
