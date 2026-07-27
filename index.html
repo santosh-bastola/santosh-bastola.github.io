@@ -1,1 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santosh Bastola | Executive Portfolio</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- MAIN CSS FILE LINK -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- Subtly Glowing Mouse Follower -->
+  <div class="mouse-glow" id="mouseGlow"></div>
+
+  <!-- NAVIGATION -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">
+        <span class="brand-name">SANTOSH BASTOLA</span>
+        <span class="brand-tag">EXECUTIVE PORTFOLIO</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link active">ABOUT</a>
+        <a href="#experience" class="nav-link">EXPERIENCE</a>
+        <a href="#expertise" class="nav-link">EXPERTISE</a>
+        <a href="#impact" class="nav-link">IMPACT</a>
+        <a href="#sap-erp" class="nav-link">SAP & ERP</a>
+        <a href="#education" class="nav-link">EDUCATION</a>
+        <a href="#contact" class="nav-link">CONTACT</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+          <span class="theme-text">COMMAND MODE</span>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="about" class="hero-section">
+      <div class="hero-grid">
+        <!-- LEFT COLUMN -->
+        <div class="hero-content reveal-up">
+          <div class="verified-badge">
+            <span class="badge-dot"></span>
+            VERIFIED EXECUTIVE PROFILE
+          </div>
+          <h1 class="hero-title">
+            PROCUREMENT & INVENTORY<br>
+            <span class="text-accent">MANAGEMENT PROFESSIONAL</span>
+          </h1>
+          <p class="hero-subtitle">
+            10+ years of experience managing procurement, inventory, suppliers, imports, ERP operations and supply chain control.
+          </p>
+
+          <!-- Operational Visual Chain -->
+          <div class="chain-container">
+            <div class="chain-title">END-TO-END OPERATIONAL CHAIN</div>
+            <div class="chain-flow">
+              <span class="chain-step">SUPPLIER</span>
+              <i class="fa-solid fa-angle-right chain-arrow"></i>
+              <span class="chain-step">PROCUREMENT</span>
+              <i class="fa-solid fa-angle-right chain-arrow"></i>
+              <span class="chain-step">IMPORT</span>
+              <i class="fa-solid fa-angle-right chain-arrow"></i>
+              <span class="chain-step">INVENTORY</span>
+              <i class="fa-solid fa-angle-right chain-arrow"></i>
+              <span class="chain-step">PRODUCTION</span>
+              <i class="fa-solid fa-angle-right chain-arrow"></i>
+              <span class="chain-step">COST CONTROL</span>
+              <i class="fa-solid fa-angle-right chain-arrow"></i>
+              <span class="chain-step highlight">BUSINESS CONTINUITY</span>
+            </div>
+          </div>
+
+          <!-- Hero Quick Metrics -->
+          <div class="hero-metrics-row">
+            <div class="hero-metric">
+              <div class="metric-val">10+</div>
+              <div class="metric-lbl">YEARS EXP.</div>
+            </div>
+            <div class="hero-metric">
+              <div class="metric-val">150+</div>
+              <div class="metric-lbl">VENDOR NETWORK</div>
+            </div>
+            <div class="hero-metric">
+              <div class="metric-val">100+</div>
+              <div class="metric-lbl">LOCAL VENDORS</div>
+            </div>
+            <div class="hero-metric">
+              <div class="metric-val">50+</div>
+              <div class="metric-lbl">INTL SUPPLIERS</div>
+            </div>
+          </div>
+
+          <!-- Hero CTAs -->
+          <div class="hero-cta-group">
+            <a href="#contact" class="btn btn-primary">
+              <span>CONTACT DIRECT</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
+            <a href="#experience" class="btn btn-secondary">
+              <span>EXPLORE EXPERIENCE</span>
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: EXECUTIVE COMMAND STATUS CARD -->
+        <div class="hero-card-col reveal-slide-in">
+          <div class="command-card">
+            <div class="card-header">
+              <div class="profile-img-container">
+                <img src="profile.jpg" alt="Santosh Bastola" class="profile-img">
+                <span class="status-indicator-dot" title="Verified Active"></span>
+              </div>
+              <div class="profile-header-meta">
+                <div class="commander-tag">VERIFIED COMMANDER</div>
+                <h3 class="commander-name">Santosh Bastola</h3>
+                <div class="availability-pill">
+                  <i class="fa-solid fa-circle"></i> AVAILABLE / 1 MONTH NOTICE
+                </div>
+              </div>
+            </div>
+
+            <div class="card-divider"></div>
+
+            <div class="card-data-rows">
+              <div class="data-row">
+                <span class="data-label">CURRENT ROLE</span>
+                <span class="data-value highlight">Procurement & Inventory Manager</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">CURRENT COMPANY</span>
+                <span class="data-value">Shivam Plastic Industry Limited<br><small class="text-gold">Golyan Group</small></span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">CORE SPECIALIZATION</span>
+                <span class="data-value">Procurement & Inventory Management</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">ERP CAPABILITY</span>
+                <span class="data-value tech-badge">SAP MM / SAP PP</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">OPERATIONAL FOCUS</span>
+                <span class="data-value">Procurement • Inventory • Supply Chain</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">IMPORT & BANKING</span>
+                <span class="data-value">LC • RTGS • Customs • Shipment</span>
+              </div>
+              <div class="data-row">
+                <span class="data-label">LOCATION</span>
+                <span class="data-value"><i class="fa-solid fa-location-dot"></i> Biratnagar, Nepal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRATEGIC BUSINESS VALUE -->
+    <section class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">STRATEGIC IMPACT</span>
+        <h2>CORE STRATEGIC BUSINESS VALUE</h2>
+      </div>
+
+      <div class="value-grid">
+        <div class="value-card reveal-up">
+          <div class="card-icon"><i class="fa-solid fa-handshake-simple"></i></div>
+          <h3 class="card-title">CARD 01</h3>
+          <h4>STRATEGIC PROCUREMENT & SOURCING</h4>
+          <p>Supplier coordination, sourcing, purchasing control and cost awareness across local and international vendors.</p>
+        </div>
+
+        <div class="value-card reveal-up">
+          <div class="card-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+          <h3 class="card-title">CARD 02</h3>
+          <h4>INVENTORY & MATERIAL CONTROL</h4>
+          <p>Maintaining material visibility, stock control and operational availability.</p>
+        </div>
+
+        <div class="value-card reveal-up">
+          <div class="card-icon"><i class="fa-solid fa-ship"></i></div>
+          <h3 class="card-title">CARD 03</h3>
+          <h4>IMPORT & LOGISTICS OPERATIONS</h4>
+          <p>End-to-End Process covering LC, RTGS, customs clearance and shipment coordination.</p>
+        </div>
+
+        <div class="value-card reveal-up">
+          <div class="card-icon"><i class="fa-solid fa-industry"></i></div>
+          <h3 class="card-title">CARD 04</h3>
+          <h4>PRODUCTION MATERIAL CONTINUITY</h4>
+          <p>Supporting material availability and continuous manufacturing operations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREER JOURNEY -->
+    <section id="experience" class="section-container alt-bg">
+      <div class="section-header reveal-up">
+        <span class="section-tag">TRACK RECORD</span>
+        <h2>CAREER JOURNEY</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal-up">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-period text-cyan">2023 — PRESENT (CURRENT)</div>
+            <h3 class="timeline-role">PROCUREMENT & INVENTORY MANAGER</h3>
+            <div class="timeline-company">Shivam Plastic Industry Limited — Tarpaulin Division</div>
+            <div class="timeline-parent text-gold">Golyan Group • Biratnagar, Nepal</div>
+            <p class="timeline-focus">Focus: Procurement, inventory, material operations and manufacturing support.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-period text-cyan">2022 — 2023</div>
+            <h3 class="timeline-role">PROCUREMENT MANAGER</h3>
+            <div class="timeline-company">Maa Jagadamba Plasto & Metal Industries</div>
+            <div class="timeline-parent">Bardibas, Nepal</div>
+            <p class="timeline-focus">Focus: Procurement, inventory and import-related operations.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content glass-panel">
+            <div class="timeline-period text-cyan">PREVIOUS ROLE</div>
+            <h3 class="timeline-role">PROCUREMENT & INVENTORY MANAGER</h3>
+            <div class="timeline-company">Shivam Footwear Pvt. Ltd.</div>
+            <div class="timeline-parent">Biratnagar, Nepal</div>
+            <p class="timeline-focus">Focus: Procurement, inventory, suppliers, LC, RTGS, customs clearance and shipment operations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE EXPERTISE -->
+    <section id="expertise" class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">CAPABILITIES</span>
+        <h2>CORE EXPERTISE</h2>
+      </div>
+
+      <div class="swiss-grid">
+        <div class="expertise-card reveal-up">
+          <i class="fa-solid fa-cart-flatbed expertise-icon"></i>
+          <h4>PROCUREMENT & STRATEGIC SOURCING</h4>
+          <p>End-to-end commercial negotiations and strategic vendor lifecycle management.</p>
+        </div>
+
+        <div class="expertise-card reveal-up">
+          <i class="fa-solid fa-users-gear expertise-icon"></i>
+          <h4>VENDOR MANAGEMENT</h4>
+          <p>Relationship building, performance evaluation, and international network expansion.</p>
+        </div>
+
+        <div class="expertise-card reveal-up">
+          <i class="fa-solid fa-chart-line expertise-icon"></i>
+          <h4>INVENTORY PLANNING & CONTROL</h4>
+          <p>Stock optimization, buffer management, and minimizing holding overheads.</p>
+        </div>
+
+        <div class="expertise-card reveal-up">
+          <i class="fa-solid fa-truck-fast expertise-icon"></i>
+          <h4>SUPPLY CHAIN & LOGISTICS</h4>
+          <p>Streamlined movement of raw materials and optimized transit lead times.</p>
+        </div>
+
+        <div class="expertise-card reveal-up">
+          <i class="fa-solid fa-globe expertise-icon"></i>
+          <h4>IMPORT OPERATIONS</h4>
+          <p>Navigating regulatory standards, trade documentation, and port procedures.</p>
+        </div>
+
+        <div class="expertise-card reveal-up">
+          <i class="fa-solid fa-building-columns expertise-icon"></i>
+          <h4>LC & BANKING COORDINATION</h4>
+          <p>Letters of Credit execution, RTGS management, and trade finance compliance.</p>
+        </div>
+
+        <div class="expertise-card reveal-up">
+          <i class="fa-solid fa-warehouse expertise-icon"></i>
+          <h4>WAREHOUSE OPERATIONS</h4>
+          <p>Internal material layout, receipt verification, and real-time audit control.</p>
+        </div>
+
+        <div class="expertise-card reveal-up">
+          <i class="fa-solid fa-diagram-project expertise-icon"></i>
+          <h4>PRODUCTION MATERIAL PLANNING</h4>
+          <p>Aligning raw stock availability directly with active manufacturing schedules.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL SCALE / IMPACT METRICS -->
+    <section id="impact" class="section-container alt-bg">
+      <div class="section-header reveal-up">
+        <span class="section-tag">SCALE & QUANTIFIED METRICS</span>
+        <h2>PROFESSIONAL SCALE / IMPACT</h2>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="impact-card reveal-up">
+          <div class="impact-number counter" data-target="10">0</div>
+          <div class="impact-plus">+ YEARS</div>
+          <div class="impact-label">PROFESSIONAL EXPERIENCE</div>
+        </div>
+
+        <div class="impact-card reveal-up span-card">
+          <div class="vendor-breakdown">
+            <div class="main-vendor-num">
+              <span class="counter" data-target="150">0</span>+
+            </div>
+            <div class="main-vendor-title">VENDOR NETWORK</div>
+            <div class="sub-vendors">
+              <div><strong class="counter" data-target="100">0</strong>+ LOCAL VENDORS</div>
+              <div><strong class="counter" data-target="50">0</strong>+ INTERNATIONAL SUPPLIERS</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="impact-card reveal-up">
+          <div class="impact-currency">NPR 70–80 LAKHS</div>
+          <div class="impact-label">ANNUAL LOCAL PROCUREMENT</div>
+        </div>
+
+        <div class="impact-card reveal-up">
+          <div class="impact-currency text-cyan">USD 20,000+</div>
+          <div class="impact-label">INTERNATIONAL PROCUREMENT</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- END-TO-END OPERATIONAL WORKFLOW -->
+    <section class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">METHODOLOGY</span>
+        <h2>END-TO-END OPERATIONAL CONTROL</h2>
+      </div>
+
+      <div class="workflow-wrapper reveal-up">
+        <div class="workflow-track">
+          <div class="workflow-stage">
+            <div class="stage-num">STAGE 01</div>
+            <div class="stage-card">
+              <i class="fa-solid fa-clipboard-list stage-icon"></i>
+              <h4>REQUIREMENT</h4>
+              <span class="stage-label">Material Demand Identification</span>
+            </div>
+          </div>
+          <div class="workflow-connector"><i class="fa-solid fa-chevron-right"></i></div>
+
+          <div class="workflow-stage">
+            <div class="stage-num">STAGE 02</div>
+            <div class="stage-card">
+              <i class="fa-solid fa-sliders stage-icon"></i>
+              <h4>PLANNING</h4>
+              <span class="stage-label">Budgeting & Scheduling</span>
+            </div>
+          </div>
+          <div class="workflow-connector"><i class="fa-solid fa-chevron-right"></i></div>
+
+          <div class="workflow-stage">
+            <div class="stage-num">STAGE 03</div>
+            <div class="stage-card">
+              <i class="fa-solid fa-magnifying-glass-location stage-icon"></i>
+              <h4>SOURCING</h4>
+              <span class="stage-label">Supplier Selection & Negotiation</span>
+            </div>
+          </div>
+          <div class="workflow-connector"><i class="fa-solid fa-chevron-right"></i></div>
+
+          <div class="workflow-stage">
+            <div class="stage-num">STAGE 04</div>
+            <div class="stage-card">
+              <i class="fa-solid fa-file-invoice-dollar stage-icon"></i>
+              <h4>PROCUREMENT</h4>
+              <span class="stage-label">PO Execution & Terms</span>
+            </div>
+          </div>
+          <div class="workflow-connector"><i class="fa-solid fa-chevron-right"></i></div>
+
+          <div class="workflow-stage">
+            <div class="stage-num">STAGE 05</div>
+            <div class="stage-card">
+              <i class="fa-solid fa-plane-circle-check stage-icon"></i>
+              <h4>IMPORT / LOGISTICS</h4>
+              <span class="stage-label">LC, Customs & Freight Transit</span>
+            </div>
+          </div>
+          <div class="workflow-connector"><i class="fa-solid fa-chevron-right"></i></div>
+
+          <div class="workflow-stage">
+            <div class="stage-num">STAGE 06</div>
+            <div class="stage-card">
+              <i class="fa-solid fa-boxes-check stage-icon"></i>
+              <h4>RECEIPT & ERP AUDIT</h4>
+              <span class="stage-label">Stock Entry & Operations Support</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="workflow-summary">
+          <span>REQUIREMENT</span> → <span>PLANNING</span> → <span>SUPPLIER</span> → <span>PURCHASE</span> → <span>IMPORT</span> → <span>RECEIPT</span> → <span>INVENTORY</span> → <span>ERP</span> → <span class="highlight">BUSINESS CONTINUITY</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SAP & ERP CAPABILITY -->
+    <section id="sap-erp" class="section-container alt-bg">
+      <div class="section-header reveal-up">
+        <span class="section-tag">SYSTEM INTEGRATION</span>
+        <h2>SAP & ERP CAPABILITY</h2>
+      </div>
+
+      <div class="erp-grid">
+        <div class="erp-card reveal-up">
+          <div class="erp-badge">PRIMARY SYSTEM</div>
+          <h3 class="erp-title">SAP MM</h3>
+          <p class="erp-sub">Materials Management</p>
+          <div class="erp-divider"></div>
+          <div class="erp-tags">
+            <span>PROCUREMENT</span>
+            <span>MATERIALS</span>
+            <span>INVENTORY</span>
+          </div>
+          <div class="erp-process">SAP MM — End-to-End Process Execution</div>
+        </div>
+
+        <div class="erp-card reveal-up">
+          <div class="erp-badge">PRIMARY SYSTEM</div>
+          <h3 class="erp-title">SAP PP</h3>
+          <p class="erp-sub">Production Planning</p>
+          <div class="erp-divider"></div>
+          <div class="erp-tags">
+            <span>PRODUCTION</span>
+            <span>PLANNING</span>
+            <span>MATERIAL AVAILABILITY</span>
+          </div>
+          <div class="erp-process">SAP PP — End-to-End Process Integration</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & PROFESSIONAL DEVELOPMENT -->
+    <section id="education" class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">QUALIFICATIONS</span>
+        <h2>EDUCATION & PROFESSIONAL DEVELOPMENT</h2>
+      </div>
+
+      <div class="education-card reveal-up glass-panel">
+        <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="edu-details">
+          <h3>BACHELOR OF BUSINESS STUDIES (BBS)</h3>
+          <p class="edu-campus">Birat Campus</p>
+          <p class="edu-univ">Tribhuvan University</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXECUTIVE CONTACT CARD -->
+    <section id="contact" class="section-container alt-bg">
+      <div class="section-header reveal-up">
+        <span class="section-tag">DIRECT CONNECT</span>
+        <h2>LET'S CONNECT FOR MEANINGFUL OPPORTUNITIES</h2>
+      </div>
+
+      <div class="contact-command-center reveal-up">
+        <div class="contact-info-panel">
+          <div class="contact-meta-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <span class="lbl">LOCATION</span>
+              <p>Biratnagar-4, Kanchanbari, South of NMCTH, Nepal</p>
+            </div>
+          </div>
+          <div class="contact-meta-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <span class="lbl">PHONE</span>
+              <p>+977 9852021299</p>
+            </div>
+          </div>
+          <div class="contact-meta-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <span class="lbl">EMAIL</span>
+              <p>bastolasantosh1993@outlook.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-buttons-grid">
+          <a href="https://www.linkedin.com/in/santosh-bastola-5a11193b0" target="_blank" rel="noopener" class="contact-btn">
+            <div class="btn-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="btn-text">
+              <span class="tech-lbl">PROFESSIONAL NETWORK</span>
+              <span class="main-lbl">LINKEDIN</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square btn-arrow"></i>
+          </a>
+
+          <a href="https://wa.me/9779852021299" target="_blank" rel="noopener" class="contact-btn">
+            <div class="btn-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="btn-text">
+              <span class="tech-lbl">DIRECT CHAT</span>
+              <span class="main-lbl">WHATSAPP</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square btn-arrow"></i>
+          </a>
+
+          <a href="mailto:bastolasantosh1993@outlook.com" class="contact-btn">
+            <div class="btn-icon"><i class="fa-regular fa-envelope"></i></div>
+            <div class="btn-text">
+              <span class="tech-lbl">ELECTRONIC MAIL</span>
+              <span class="main-lbl">EMAIL ME</span>
+            </div>
+            <i class="fa-solid fa-arrow-right btn-arrow"></i>
+          </a>
+
+          <a href="tel:+9779852021299" class="contact-btn">
+            <div class="btn-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="btn-text">
+              <span class="tech-lbl">DIRECT LINE</span>
+              <span class="main-lbl">CALL ME</span>
+            </div>
+              <i class="fa-solid fa-arrow-right btn-arrow"></i>
+          </a>
+
+          <!-- Download CV Button -->
+          <a href="Santosh-Bastola-CV.pdf" download class="contact-btn cv-highlight">
+            <div class="btn-icon"><i class="fa-solid fa-file-arrow-down"></i></div>
+            <div class="btn-text">
+              <span class="tech-lbl">CURRICULUM VITAE</span>
+              <span class="main-lbl">DOWNLOAD CV</span>
+            </div>
+            <i class="fa-solid fa-download btn-arrow"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <strong>SANTOSH BASTOLA</strong> — Executive Command Center
+      </div>
+      <div class="footer-right">
+        <span>Procurement • Inventory • Supply Chain • ERP Operations</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
