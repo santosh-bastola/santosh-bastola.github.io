@@ -1,233 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Santosh Bastola | Inventory & Procurement Manager</title>
-  <meta name="description" content="Santosh Bastola - Inventory & Procurement Manager with 10+ years experience in Inventory Management, Procurement, Supply Chain and ERP.">
-
-  <!-- Open Graph & Social Media Link Preview Tags -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Santosh Bastola | Inventory & Procurement Manager">
-  <meta property="og:description" content="10+ years experience in Inventory Management, Procurement, Supply Chain, SAP MM/PP, and ERP systems.">
-  <meta property="og:image" content="profile.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Google Fonts: Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory & Procurement Manager | Portfolio</title>
+  <meta name="description" content="Professional portfolio and interactive resume of an experienced Inventory & Procurement Manager." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- Floating Glass Navigation -->
-  <header class="navbar-wrapper">
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="#home" class="logo">Santosh<span>.b</span></a>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">IP<span>Manager</span></a>
+      
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#skills" class="nav-item">Competencies</a>
+        <a href="#experience" class="nav-item">Experience</a>
+        <a href="#education" class="nav-item">Education</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
 
-        <ul class="nav-menu" id="nav-menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <div class="nav-controls">
-          <button id="theme-toggle" class="control-btn" aria-label="Toggle Theme">
-            <i class="fa-solid fa-moon"></i>
-          </button>
-          <button id="menu-toggle" class="control-btn hamburger" aria-label="Toggle Navigation">
-            <i class="fa-solid fa-bars"></i>
-          </button>
-        </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-    </nav>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-glow"></div>
-    <div class="hero-content">
-      <div class="profile-avatar-container">
-        <img src="profile.jpg" alt="Santosh Bastola" class="profile-img">
-        <span class="status-dot" title="Available for Management Roles"></span>
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-content">
+        <span class="badge">Supply Chain & Logistics Specialist</span>
+        <h1 class="hero-title">Optimizing Supply Chains & Driving Procurement Excellence</h1>
+        <p class="hero-subtitle">
+          Strategic Inventory & Procurement Professional specializing in vendor negotiation, ERP integrations, cost reduction, and end-to-end supply chain logistics.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+          <a href="#experience" class="btn btn-outline">View Experience</a>
+        </div>
       </div>
-      
-      <div class="experience-badge">
-        <i class="fa-solid fa-award"></i> 10+ Years Professional Experience
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">Professional Summary</h2>
+        <div class="about-card">
+          <p>
+            Results-driven <strong>Inventory & Procurement Manager</strong> with extensive experience leading cross-functional procurement operations, managing warehouse logistics, and optimizing inventory turnover. Proven track record in executing high-value negotiations, establishing strategic vendor alliances, and implementing robust inventory control models (ABC analysis, JIT, Safety Stock management) to minimize holding costs while ensuring zero operational downtime.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <h1>Santosh Bastola</h1>
-      <h2>Inventory & Procurement Manager</h2>
-      
-      <p class="tagline">
-        Inventory Management <span>•</span> Procurement <span>•</span> Supply Chain <span>•</span> Logistics <span>•</span> SAP ERP
-      </p>
-
-      <p class="location"><i class="fa-solid fa-location-dot"></i> Biratnagar, Nepal</p>
-
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Get In Touch <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="Santosh-Bastola-CV.pdf" download class="btn btn-secondary"><i class="fa-solid fa-file-pdf"></i> Resume</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="card glass-card">
-      <div class="card-header">
-        <span class="section-subtitle">Overview</span>
-        <h2>Professional Summary</h2>
-      </div>
-      <p class="lead-text">
-        Experienced Inventory & Procurement Manager with more than 10 years of expertise across high-demand manufacturing and trading sectors. 
-      </p>
-      <p>
-        Proven track record in optimizing inventory cycles, streamlining supplier procurement workflows, vendor negotiations, SAP MM/PP operations, import documentation, and end-to-end warehouse logistics.
-      </p>
-    </div>
-  </section>
-
-  <!-- Core Skills Section -->
-  <section id="skills" class="section">
-    <div class="section-title-wrapper">
-      <span class="section-subtitle">Capabilities</span>
-      <h2 class="section-title">Core Competencies</h2>
-    </div>
-
-    <div class="skills-grid">
-      <div class="skill-card"><span class="skill-icon">📦</span> Inventory Management</div>
-      <div class="skill-card"><span class="skill-icon">🛒</span> Procurement Management</div>
-      <div class="skill-card"><span class="skill-icon">🚚</span> Supply Chain Operations</div>
-      <div class="skill-card"><span class="skill-icon">💻</span> SAP MM & SAP PP</div>
-      <div class="skill-card"><span class="skill-icon">⚙️</span> Enterprise ERP Systems</div>
-      <div class="skill-card"><span class="skill-icon">🤝</span> Vendor Relationship Management</div>
-      <div class="skill-card"><span class="skill-icon">📄</span> Import & Customs Documentation</div>
-      <div class="skill-card"><span class="skill-icon">🏭</span> Modern Warehouse Logistics</div>
-      <div class="skill-card"><span class="skill-icon">📊</span> Tally Prime & Financial Analytics</div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="section">
-    <div class="section-title-wrapper">
-      <span class="section-subtitle">Career Path</span>
-      <h2 class="section-title">Professional Experience</h2>
-    </div>
-
-    <div class="experience-timeline">
-      
-      <div class="timeline-card glass-card">
-        <div class="timeline-header">
-          <div class="company-badge">GGSPIL</div>
-          <div>
-            <span class="date-chip">Dec 2023 - Present</span>
-            <h3>Inventory & Procurement Manager</h3>
-            <h4>Golyan Group – Shivam Plastic Industry Limited</h4>
+    <!-- Key Competencies -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Core Competencies</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Strategic Sourcing</h3>
+            <p>RFP/RFQ lifecycle management, global vendor sourcing, contract negotiations, and supplier relationship management (SRM).</p>
+          </div>
+          <div class="card">
+            <h3>Inventory Control</h3>
+            <p>Demand forecasting, stock reconciliation, cycle counting, safety stock optimization, and valuation audit compliance.</p>
+          </div>
+          <div class="card">
+            <h3>ERP Systems & Tech</h3>
+            <p>Advanced proficiency in SAP, Oracle SCM, Tally ERP, inventory tracking, data analytics, and reporting dashboards.</p>
+          </div>
+          <div class="card">
+            <h3>Logistics & Warehousing</h3>
+            <p>Inbound/outbound freight management, 3PL coordination, warehouse layout optimization, and customs compliance.</p>
+          </div>
+          <div class="card">
+            <h3>Cost Optimization</h3>
+            <p>Total cost of ownership (TCO) reduction, purchase variance analysis, and spend analysis to drive bottom-line margin growth.</p>
+          </div>
+          <div class="card">
+            <h3>Team Leadership</h3>
+            <p>Leading multidisciplinary procurement teams, cross-departmental alignment, and standard operating procedure (SOP) development.</p>
           </div>
         </div>
-        <p class="location-tag"><i class="fa-solid fa-location-pin"></i> Biratnagar, Nepal</p>
       </div>
+    </section>
 
-      <div class="timeline-card glass-card">
-        <div class="timeline-header">
-          <div class="company-badge">MJPU</div>
-          <div>
-            <span class="date-chip">Jan 2022 - Dec 2023</span>
-            <h3>Inventory & Procurement Manager</h3>
-            <h4>Maa Jagadamba Plasto Udyog & Metal Industries Pvt. Ltd.</h4>
+    <!-- Professional Experience -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="timeline">
+          
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <h3>Inventory & Procurement Manager</h3>
+              <span class="timeline-date">2021 – Present</span>
+            </div>
+            <p class="timeline-company">Enterprise Operations / Manufacturing</p>
+            <ul class="timeline-body">
+              <li>Directed end-to-end procurement and inventory workflows, managing an annual spend budget exceeding $10M.</li>
+              <li>Negotiated key supplier contracts, securing an overall 12% annual reduction in raw material acquisition costs.</li>
+              <li>Overhauled warehouse inventory tracking with automated ERP cycle counts, boosting accuracy from 88% to 99.2%.</li>
+              <li>Engineered lean inventory protocols that slashed holding costs by 18% without compromising order fulfillment rates.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <h3>Assistant Procurement Lead</h3>
+              <span class="timeline-date">2018 – 2021</span>
+            </div>
+            <p class="timeline-company">Regional Logistics & Supply Chain</p>
+            <ul class="timeline-body">
+              <li>Managed vendor evaluation processes and established KPI scorecards to audit delivery times and product quality.</li>
+              <li>Collaborated with finance and audit teams to conduct monthly trial balance reconciliations and ledger audits.</li>
+              <li>Coordinated multi-channel freight shipments, reducing lead times by 20% through optimized carrier routing.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="education" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Education & Certifications</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Bachelor's Degree in Business / Supply Chain</h3>
+            <p class="text-muted">Specialization in Operations, Logistics, and Financial Management</p>
+          </div>
+          <div class="card">
+            <h3>Professional Certifications</h3>
+            <p class="text-muted">Certified Supply Chain Professional (CSCP) / Certified in Production and Inventory Management (CPIM)</p>
           </div>
         </div>
-        <p class="location-tag"><i class="fa-solid fa-location-pin"></i> Dhalkebar, Nepal</p>
       </div>
+    </section>
 
-      <div class="timeline-card glass-card">
-        <div class="timeline-header">
-          <div class="company-badge">SFPL</div>
-          <div>
-            <span class="date-chip">Sep 2015 - Dec 2022</span>
-            <h3>Inventory & Procurement Manager</h3>
-            <h4>Shivam Footwears Pvt. Ltd.</h4>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-card">
+          <p>Interested in discussing strategic procurement, inventory optimization, or leadership roles? Feel free to reach out.</p>
+          <div class="contact-details">
+            <a href="mailto:your.email@example.com" class="btn btn-primary">Send Email</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn btn-outline">Connect on LinkedIn</a>
           </div>
         </div>
-        <p class="location-tag"><i class="fa-solid fa-location-pin"></i> Biratnagar, Nepal</p>
       </div>
+    </section>
+  </main>
 
-      <div class="timeline-card glass-card">
-        <div class="timeline-header">
-          <div class="company-badge">NGMP</div>
-          <div>
-            <span class="date-chip">2012 - 2015</span>
-            <h3>Operations & Accounts Assistant</h3>
-            <h4>New GS Mobile Palace</h4>
-          </div>
-        </div>
-        <p class="location-tag"><i class="fa-solid fa-location-pin"></i> Biratnagar, Nepal</p>
-      </div>
-
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Inventory & Procurement Portfolio. All rights reserved.</p>
     </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="card glass-card contact-card">
-      <div class="card-header text-center">
-        <span class="section-subtitle">Let's Connect</span>
-        <h2>Contact Information</h2>
-        <p class="contact-subtext">Feel free to reach out directly via email, phone, or instant messaging.</p>
-      </div>
-
-      <div class="contact-info-list">
-        <div class="info-item">
-          <i class="fa-solid fa-location-dot"></i>
-          <span>Biratnagar-4, Kanchanbari, South of NMCTH, Nepal</span>
-        </div>
-        <div class="info-item">
-          <i class="fa-solid fa-envelope"></i>
-          <span>bastolasantosh1993@outlook.com</span>
-        </div>
-        <div class="info-item">
-          <i class="fa-solid fa-phone"></i>
-          <span>+977 9852021299</span>
-        </div>
-      </div>
-
-      <div class="buttons">
-        <a href="Santosh-Bastola-CV.pdf" download class="btn btn-action cv">
-          <i class="fa-solid fa-file-pdf"></i> Download CV
-        </a>
-        <a href="https://www.linkedin.com/in/santosh-bastola-5a11193b0" target="_blank" rel="noopener noreferrer" class="btn btn-action linkedin">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://wa.me/9779852021299" target="_blank" rel="noopener noreferrer" class="btn btn-action whatsapp">
-          <i class="fab fa-whatsapp"></i> WhatsApp
-        </a>
-        <a href="mailto:bastolasantosh1993@outlook.com" class="btn btn-action email">
-          <i class="fa-solid fa-envelope"></i> Email
-        </a>
-        <a href="tel:+9779852021299" class="btn btn-action call">
-          <i class="fa-solid fa-phone"></i> Call
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Santosh Bastola <span>•</span> Inventory & Procurement Manager</p>
   </footer>
 
-  <!-- Main JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
