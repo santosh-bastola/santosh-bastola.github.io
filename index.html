@@ -1,1 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santosh Bastola | Executive Procurement & Inventory Manager</title>
+    <meta name="description" content="Executive portfolio of Santosh Bastola, Inventory & Procurement Manager with 10+ years of experience across SAP MM/PP, ERP systems, local/international sourcing, LC/import processes, and supply chain control.">
+    <meta name="keywords" content="Procurement Manager, Inventory Management, Supply Chain Professional, SAP MM, SAP PP, Sourcing, Imports, LC, Customs Clearance, Nepal, Santosh Bastola">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
+    <style>
+        :root {
+            /* Command Mode (Dark Theme) */
+            --bg-primary: #080C14;
+            --bg-secondary: #0D1424;
+            --bg-card: rgba(15, 23, 42, 0.65);
+            --bg-card-border: rgba(255, 255, 255, 0.08);
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+            --accent-blue: #38BDF8;
+            --accent-royal: #2563EB;
+            --accent-navy: #1E293B;
+            --accent-gold: #D97706;
+            --accent-gold-light: #FBBF24;
+            --glass-bg: rgba(13, 20, 36, 0.7);
+            --glass-border: rgba(56, 189, 248, 0.15);
+            --nav-bg: rgba(8, 12, 20, 0.85);
+            --shadow-subtle: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        [data-theme="light"] {
+            /* Executive Mode (Light Theme) */
+            --bg-primary: #F8FAFC;
+            --bg-secondary: #F1F5F9;
+            --bg-card: #FFFFFF;
+            --bg-card-border: rgba(0, 0, 0, 0.08);
+            --text-primary: #0F172A;
+            --text-secondary: #475569;
+            --text-muted: #64748B;
+            --accent-blue: #0284C7;
+            --accent-royal: #1D4ED8;
+            --accent-navy: #E2E8F0;
+            --accent-gold: #B45309;
+            --accent-gold-light: #D97706;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(2, 132, 199, 0.2);
+            --nav-bg: rgba(248, 250, 252, 0.85);
+            --shadow-subtle: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Typography Helper Classes */
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .text-accent { color: var(--accent-blue); }
+        .text-gold { color: var(--accent-gold-light); }
+        
+        /* Container */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--nav-bg);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--bg-card-border);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            text-decoration: none;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-tag {
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-blue);
+            border-radius: 4px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .theme-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--bg-card-border);
+            color: var(--text-primary);
+            padding: 0.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--accent-blue);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-royal), var(--accent-blue));
+            color: #FFFFFF;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--bg-card-border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        /* Mobile Nav Toggle */
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        /* Sections General */
+        section {
+            padding: 6rem 0;
+            border-bottom: 1px solid var(--bg-card-border);
+        }
+
+        .section-header {
+            margin-bottom: 3.5rem;
+        }
+
+        .section-subtitle {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-blue);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 10rem;
+            padding-bottom: 6rem;
+            position: relative;
+            background: radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.08) 0%, transparent 40%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            color: var(--accent-blue);
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--accent-gold-light);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero-metrics-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--bg-card-border);
+        }
+
+        .metric-mini-val {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .metric-mini-lbl {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Executive Command Card */
+        .command-card {
+            background: var(--bg-card);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(12px);
+            box-shadow: var(--shadow-subtle);
+            position: relative;
+        }
+
+        .command-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--bg-card-border);
+            margin-bottom: 1.5rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #10B981;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px #10B981;
+        }
+
+        .command-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .command-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.875rem;
+        }
+
+        .command-label {
+            color: var(--text-secondary);
+        }
+
+        .command-value {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Value Proposition Grid */
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .value-card {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-card-border);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: var(--transition-smooth);
+        }
+
+        .value-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-3px);
+        }
+
+        .value-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-blue);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .value-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .value-desc {
+            font-size: 0.925rem;
+            color: var(--text-secondary);
+        }
+
+        /* Career Journey Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--bg-card-border);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3.5rem;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -2rem;
+            top: 0;
+            transform: translateX(-50%);
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            border: 4px solid var(--bg-primary);
+        }
+
+        .timeline-content {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-card-border);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .timeline-role {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .timeline-company {
+            font-size: 1rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-meta {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .timeline-bullets {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .timeline-bullets li {
+            position: relative;
+            padding-left: 1.25rem;
+            font-size: 0.925rem;
+            color: var(--text-secondary);
+        }
+
+        .timeline-bullets li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+        }
+
+        /* Core Expertise Grid */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 2rem;
+        }
+
+        .expertise-card {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-card-border);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .expertise-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--bg-card-border);
+        }
+
+        .expertise-header h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .expertise-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .pill {
+            background: var(--bg-secondary);
+            border: 1px solid var(--bg-card-border);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Business Impact Section */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .impact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-card-border);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .impact-card::top {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-royal), var(--accent-blue));
+        }
+
+        .impact-number {
+            font-size: 2.75rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+            line-height: 1;
+        }
+
+        .impact-label {
+            font-size: 0.875rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-sub {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Procurement Command Center (Workflow) */
+        .workflow-wrapper {
+            overflow-x: auto;
+            padding-bottom: 1rem;
+        }
+
+        .workflow-chain {
+            display: flex;
+            gap: 1rem;
+            min-width: 1000px;
+        }
+
+        .workflow-step {
+            flex: 1;
+            background: var(--bg-card);
+            border: 1px solid var(--bg-card-border);
+            border-radius: 8px;
+            padding: 1.25rem 1rem;
+            position: relative;
+        }
+
+        .workflow-num {
+            font-size: 0.7rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .workflow-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .workflow-desc {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* SAP & ERP Capability */
+        .erp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .erp-card {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-card-border);
+            border-radius: 12px;
+            padding: 2.5rem;
+            position: relative;
+        }
+
+        .erp-badge {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 0.7rem;
+            padding: 0.25rem 0.6rem;
+            background: rgba(217, 119, 6, 0.15);
+            color: var(--accent-gold-light);
+            border: 1px solid rgba(217, 119, 6, 0.3);
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .erp-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .erp-subtitle {
+            font-size: 0.875rem;
+            color: var(--accent-blue);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* Education & Certs Grid */
+        .edu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .edu-card {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-card-border);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .edu-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--bg-card-border);
+        }
+
+        .edu-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .edu-degree {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .edu-school {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Contact Section */
+        .contact-card {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 4rem 2rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .contact-desc {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Footer */
+        footer {
+            padding: 2.5rem 0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--bg-card-border);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-title {
+                font-size: 2.75rem;
+            }
+            .edu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .mobile-toggle {
+                display: block;
+            }
+            .hero-title {
+                font-size: 2.25rem;
+            }
+            .hero-ctas {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .hero-metrics-strip {
+                grid-template-columns: 1fr;
+            }
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                SANTOSH BASTOLA
+                <span class="logo-tag mono">EXEC PORTFOLIO</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#erp">SAP & ERP</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                    <i data-lucide="sun" id="themeIcon"></i>
+                </button>
+                <a href="mailto:bastolasantosh1993@outlook.com" class="btn btn-primary">
+                    <i data-lucide="download"></i> Download CV
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="container hero-grid">
+            <div class="hero-left">
+                <div class="hero-badge mono">
+                    <i data-lucide="shield-check" size="14"></i> VERIFIED EXECUTIVE PROFILE
+                </div>
+                <h1 class="hero-title">Inventory & Procurement Manager</h1>
+                <div class="hero-subtitle">10+ Years Managing End-to-End Supply Chains, ERP & Sourcing Operations</div>
+                <p class="hero-description">
+                    Connecting <strong>Supplier → Procurement → Import → Inventory → Production → Cost Control → Business Continuity</strong>. Specializing in SAP MM/PP operational management, local & international supplier networks, customs clearance, and LC processes.
+                </p>
+                <div class="hero-ctas">
+                    <a href="mailto:bastolasantosh1993@outlook.com" class="btn btn-primary">
+                        <i data-lucide="file-text"></i> Download Official CV
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i data-lucide="mail"></i> Contact Direct
+                    </a>
+                </div>
+                <div class="hero-metrics-strip">
+                    <div>
+                        <div class="metric-mini-val mono text-accent">10+ Yrs</div>
+                        <div class="metric-mini-lbl">Industry Experience</div>
+                    </div>
+                    <div>
+                        <div class="metric-mini-val mono text-accent">150+</div>
+                        <div class="metric-mini-lbl">Vendors Managed</div>
+                    </div>
+                    <div>
+                        <div class="metric-mini-val mono text-gold">SAP MM/PP</div>
+                        <div class="metric-mini-lbl">ERP System Control</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Command Center Card -->
+            <div class="hero-right">
+                <div class="command-card">
+                    <div class="command-card-header">
+                        <span class="mono" style="font-size:0.75rem; color:var(--text-muted);">EXECUTIVE COMMAND STATUS</span>
+                        <div style="display:flex; align-items:center; gap:0.5rem;">
+                            <span class="status-dot"></span>
+                            <span class="mono" style="font-size:0.75rem; color:#10B981;">AVAILABLE (1 MO)</span>
+                        </div>
+                    </div>
+                    <ul class="command-list">
+                        <li class="command-item">
+                            <span class="command-label">Current Role:</span>
+                            <span class="command-value">Manager (Golyan Group)</span>
+                        </li>
+                        <li class="command-item">
+                            <span class="command-label">Core Specialization:</span>
+                            <span class="command-value">Procurement & Stock Control[cite: 1]</span>
+                        </li>
+                        <li class="command-item">
+                            <span class="command-label">Primary ERP Systems:</span>
+                            <span class="command-value mono text-accent">SAP MM, SAP PP, Tally[cite: 1]</span>
+                        </li>
+                        <li class="command-item">
+                            <span class="command-label">Import & Banking:</span>
+                            <span class="command-value">LC, RTGS, Customs, Freight[cite: 1]</span>
+                        </li>
+                        <li class="command-item">
+                            <span class="command-label">Location Base:</span>
+                            <span class="command-value">Biratnagar, Nepal[cite: 1]</span>
+                        </li>
+                        <li class="command-item">
+                            <span class="command-label">Global Vendor Network:</span>
+                            <span class="command-value text-gold">India & 3rd Countries[cite: 1]</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">STRATEGIC VALUE PROPOSITION</span>
+                <h2 class="section-title">Operational Excellence & Business Control</h2>
+            </div>
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon"><i data-lucide="trending-down"></i></div>
+                    <h3 class="value-title">Cost Control & Sourcing</h3>
+                    <p class="value-desc">Executing structured price negotiation, purchase planning, and cost management across 100+ local and 50+ international suppliers[cite: 1].</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i data-lucide="layers"></i></div>
+                    <h3 class="value-title">ERP-Driven Inventory</h3>
+                    <p class="value-desc">Maintaining database accuracy using SAP MM/PP, Power Brain ERP, and Tally Prime to control raw materials, finished goods, and stock movement[cite: 1].</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i data-lucide="globe"></i></div>
+                    <h3 class="value-title">Import & Logistics Command</h3>
+                    <p class="value-desc">End-to-end oversight of international trade operations, including Letter of Credit (LC), RTGS banking, customs clearance, and air/sea freight forwarding[cite: 1].</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i data-lucide="activity"></i></div>
+                    <h3 class="value-title">Production Material Planning</h3>
+                    <p class="value-desc">Ensuring material availability for continuous manufacturing schedules while supporting physical stock verification and warehouse accuracy[cite: 1].</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Journey -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">CAREER MILESTONES</span>
+                <h2 class="section-title">Professional Experience & Leadership</h2>
+            </div>
+
+            <div class="timeline">
+                <!-- Role 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-role">Inventory & Procurement Manager</div>
+                        <div class="timeline-company">Golyan Group – Shivam Plastic Industry Limited</div>
+                        <div class="timeline-meta">
+                            <span><i data-lucide="calendar" size="14"></i> Dec 2023 – Present[cite: 1]</span>
+                            <span><i data-lucide="map-pin" size="14"></i> Biratnagar, Nepal[cite: 1]</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Manage complete daily inventory operations, stock control, purchase planning, and material procurement[cite: 1].</li>
+                            <li>Maintain inventory, material receipt, consumption, stock movement, and production data within SAP MM & SAP PP[cite: 1].</li>
+                            <li>Ensure timely availability of raw materials to eliminate manufacturing bottlenecks[cite: 1].</li>
+                            <li>Prepare operational inventory, procurement, and production MIS reporting directly for senior leadership[cite: 1].</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-role">Inventory & Procurement Manager</div>
+                        <div class="timeline-company">Maa Jagadamba Plasto Udyog & Metal Industries Pvt. Ltd.</div>
+                        <div class="timeline-meta">
+                            <span><i data-lucide="calendar" size="14"></i> Jan 2022 – Dec 2023[cite: 1]</span>
+                            <span><i data-lucide="map-pin" size="14"></i> Dhalkebar, Nepal[cite: 1]</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Controlled inventory operations, purchase management, and production database records in Power Brain ERP[cite: 1].</li>
+                            <li>Handled international import processes, LC documentation, supplier documentation, and customs clearance[cite: 1].</li>
+                            <li>Maintained detailed vendor ledgers and submitted operational status updates to the Company Director[cite: 1].</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-role">Inventory & Procurement Manager</div>
+                        <div class="timeline-company">Shivam Organization – Shivam Footwears Pvt. Ltd.</div>
+                        <div class="timeline-meta">
+                            <span><i data-lucide="calendar" size="14"></i> Sep 2015 – Dec 2022[cite: 1]</span>
+                            <span><i data-lucide="map-pin" size="14"></i> Biratnagar, Nepal[cite: 1]</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Supervised complete warehouse and inventory control across raw materials and finished goods[cite: 1].</li>
+                            <li>Executed procurement with local/international vendors, issuing Purchase Orders (POs) and leading price/quality negotiations[cite: 1].</li>
+                            <li>Managed LC, RTGS, customs clearance, and air/sea freight logistics with clearing agents and freight forwarders[cite: 1].</li>
+                            <li>Controlled inventory & production records in Power Brain ERP & Tally Prime, reporting directly to the Director[cite: 1].</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Role 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-role">Operations & Accounts Assistant</div>
+                        <div class="timeline-company">New GS Mobile Palace</div>
+                        <div class="timeline-meta">
+                            <span><i data-lucide="calendar" size="14"></i> 2012 – 2015[cite: 1]</span>
+                            <span><i data-lucide="map-pin" size="14"></i> Biratnagar, Nepal[cite: 1]</span>
+                        </div>
+                        <ul class="timeline-bullets">
+                            <li>Managed daily operational accounting, VAT billing, sales documentation, and Tally transaction posting[cite: 1].</li>
+                            <li>Maintained vendor ledgers, banking records, local collections, and purchase/sales stock records[cite: 1].</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Expertise -->
+    <section id="expertise">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">COMPREHENSIVE CAPABILITIES</span>
+                <h2 class="section-title">Core Operational Expertise</h2>
+            </div>
+
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <i data-lucide="shopping-cart" class="text-accent"></i>
+                        <h3>Procurement & Sourcing</h3>
+                    </div>
+                    <div class="expertise-pills">
+                        <span class="pill">Strategic Sourcing[cite: 1]</span>
+                        <span class="pill">Vendor Negotiation[cite: 1]</span>
+                        <span class="pill">Purchase Orders (PO)[cite: 1]</span>
+                        <span class="pill">Cost Control[cite: 1]</span>
+                        <span class="pill">Supplier Relations[cite: 1]</span>
+                        <span class="pill">Material Planning[cite: 1]</span>
+                    </div>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <i data-lucide="box" class="text-accent"></i>
+                        <h3>Inventory & Warehouse Control</h3>
+                    </div>
+                    <div class="expertise-pills">
+                        <span class="pill">Stock Monitoring[cite: 1]</span>
+                        <span class="pill">Physical Verification[cite: 1]</span>
+                        <span class="pill">Stock Reconciliation[cite: 1]</span>
+                        <span class="pill">Warehouse Management[cite: 1]</span>
+                        <span class="pill">Raw Material Control[cite: 1]</span>
+                        <span class="pill">Finished Goods Control[cite: 1]</span>
+                    </div>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <i data-lucide="truck" class="text-accent"></i>
+                        <h3>Import & Logistics Operations</h3>
+                    </div>
+                    <div class="expertise-pills">
+                        <span class="pill">LC Documentation[cite: 1]</span>
+                        <span class="pill">RTGS Processing[cite: 1]</span>
+                        <span class="pill">Customs Clearance[cite: 1]</span>
+                        <span class="pill">Air & Sea Transport[cite: 1]</span>
+                        <span class="pill">Freight Forwarding[cite: 1]</span>
+                        <span class="pill">3rd Country Shipments[cite: 1]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Impact -->
+    <section id="impact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">QUANTIFIABLE METRICS</span>
+                <h2 class="section-title">Demonstrated Business Impact</h2>
+            </div>
+
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-number mono text-accent">10+</div>
+                    <div class="impact-label">Years Experience</div>
+                    <div class="impact-sub">Manufacturing & Trading Sectors[cite: 1]</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number mono text-accent">100+</div>
+                    <div class="impact-label">Local Vendors</div>
+                    <div class="impact-sub">NPR 80–90 Lakhs Annual Spend[cite: 1]</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number mono text-gold">50+</div>
+                    <div class="impact-label">Global Suppliers</div>
+                    <div class="impact-sub">India & 3rd Country Trade[cite: 1]</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number mono text-gold">$25K</div>
+                    <div class="impact-label">Import Transaction Volume</div>
+                    <div class="impact-sub">USD 20k–25k Sourcing Cycles[cite: 1]</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Procurement Command Center Workflow -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">END-TO-END WORKFLOW</span>
+                <h2 class="section-title">Procurement & Import Lifecycle Command</h2>
+            </div>
+
+            <div class="workflow-wrapper">
+                <div class="workflow-chain">
+                    <div class="workflow-step">
+                        <div class="workflow-num mono">STAGE 01</div>
+                        <div class="workflow-title">Requirement</div>
+                        <div class="workflow-desc">Production material demand planning & tracking[cite: 1].</div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-num mono">STAGE 02</div>
+                        <div class="workflow-title">Sourcing</div>
+                        <div class="workflow-desc">Vendor quotation evaluation & negotiation[cite: 1].</div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-num mono">STAGE 03</div>
+                        <div class="workflow-title">Order Creation</div>
+                        <div class="workflow-desc">ERP Purchase Order (PO) release[cite: 1].</div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-num mono">STAGE 04</div>
+                        <div class="workflow-title">Banking & LC</div>
+                        <div class="workflow-desc">LC documentation & RTGS processing[cite: 1].</div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-num mono">STAGE 05</div>
+                        <div class="workflow-title">Clearance</div>
+                        <div class="workflow-desc">Customs & freight forwarding management[cite: 1].</div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="workflow-num mono">STAGE 06</div>
+                        <div class="workflow-title">Receipt & Audit</div>
+                        <div class="workflow-desc">Warehouse GRN, stock posting & ERP reconciliation[cite: 1].</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAP & ERP Capability -->
+    <section id="erp">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">ENTERPRISE SYSTEMS CONTROLLER</span>
+                <h2 class="section-title">ERP & Software Capabilities</h2>
+            </div>
+
+            <div class="erp-grid">
+                <div class="erp-card">
+                    <div class="erp-badge mono">PRIMARY ERP</div>
+                    <h3 class="erp-title">SAP MM</h3>
+                    <div class="erp-subtitle">Materials Management</div>
+                    <ul class="timeline-bullets">
+                        <li>Procurement operational processing[cite: 1].</li>
+                        <li>Material master & movement tracking[cite: 1].</li>
+                        <li>Stock level monitoring & inventory audit[cite: 1].</li>
+                        <li>Goods receipt and issuance coordination[cite: 1].</li>
+                    </ul>
+                </div>
+
+                <div class="erp-card">
+                    <div class="erp-badge mono">PRIMARY ERP</div>
+                    <h3 class="erp-title">SAP PP</h3>
+                    <div class="erp-subtitle">Production Planning</div>
+                    <ul class="timeline-bullets">
+                        <li>Production data recording & material usage[cite: 1].</li>
+                        <li>Tracking manufacturing status[cite: 1].</li>
+                        <li>Supply chain to shop-floor coordination[cite: 1].</li>
+                        <li>Material requirement planning support[cite: 1].</li>
+                    </ul>
+                </div>
+
+                <div class="erp-card">
+                    <div class="erp-badge mono" style="color:var(--accent-blue); border-color:var(--accent-blue);">SECONDARY ERP</div>
+                    <h3 class="erp-title">Tally & Power Brain</h3>
+                    <div class="erp-subtitle">Accounting & Operational ERP</div>
+                    <ul class="timeline-bullets">
+                        <li>Power Brain ERP operational recording[cite: 1].</li>
+                        <li>Tally Prime inventory & transaction posting[cite: 1].</li>
+                        <li>Vendor ledgers & financial documentation[cite: 1].</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">QUALIFICATIONS</span>
+                <h2 class="section-title">Education & Training</h2>
+            </div>
+
+            <div class="edu-grid">
+                <div class="edu-card">
+                    <h3 style="margin-bottom:1.5rem; color:var(--accent-blue); font-size:1.1rem;">Formal Education</h3>
+                    <div class="edu-item">
+                        <div class="edu-degree">Bachelor of Business Studies (BBS)</div>
+                        <div class="edu-school">Tribhuvan University (TU) — Birat Campus, Biratnagar[cite: 1]</div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-degree">10+2 (Management)</div>
+                        <div class="edu-school">HSEB — City Higher Secondary School, Biratnagar[cite: 1]</div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-degree">School Leaving Certificate (SLC)</div>
+                        <div class="edu-school">Saraswati Higher Secondary School, Duhabi[cite: 1]</div>
+                    </div>
+                </div>
+
+                <div class="edu-card">
+                    <h3 style="margin-bottom:1.5rem; color:var(--accent-blue); font-size:1.1rem;">Certifications & Training</h3>
+                    <div class="edu-item">
+                        <div class="edu-degree">AI for Professionals</div>
+                        <div class="edu-school">98 Hours Intensive Professional Course[cite: 1]</div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-degree">Diploma in Accounting</div>
+                        <div class="edu-school">6 Months Training Course[cite: 1]</div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-degree">Basic Computer Application</div>
+                        <div class="edu-school">3 Months Practical Training[cite: 1]</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-card">
+                <h2 class="contact-title">Initiate Executive Contact</h2>
+                <p class="contact-desc">
+                    Seeking an experienced Procurement & Inventory Manager to take full ownership of sourcing, imports, supplier networks, and ERP operations? Let's connect[cite: 1].
+                </p>
+                <div class="contact-details">
+                    <div class="contact-detail-item">
+                        <i data-lucide="mail" class="text-accent"></i>
+                        <span>bastolasantosh1993@outlook.com[cite: 1]</span>
+                    </div>
+                    <div class="contact-detail-item">
+                        <i data-lucide="phone" class="text-accent"></i>
+                        <span>+977 9852021299[cite: 1]</span>
+                    </div>
+                    <div class="contact-detail-item">
+                        <i data-lucide="map-pin" class="text-accent"></i>
+                        <span>Biratnagar, Nepal[cite: 1]</span>
+                    </div>
+                </div>
+                <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+                    <a href="mailto:bastolasantosh1993@outlook.com" class="btn btn-primary">
+                        <i data-lucide="send"></i> Send Direct Email
+                    </a>
+                    <a href="mailto:bastolasantosh1993@outlook.com" class="btn btn-secondary">
+                        <i data-lucide="download"></i> Download CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Santosh Bastola. All rights reserved. | Executive Portfolio[cite: 1]</p>
+        </div>
+    </footer>
+
+    <!-- Lucide Icons Initialization & Theme Script -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Dark/Light Mode Switcher
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlElement = document.documentElement;
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            htmlElement.setAttribute('data-theme', newTheme);
+            
+            // Update icon
+            if (newTheme === 'light') {
+                themeIcon.setAttribute('data-lucide', 'moon');
+            } else {
+                themeIcon.setAttribute('data-lucide', 'sun');
+            }
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
