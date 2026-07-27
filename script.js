@@ -1,73 +1,61 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // ==========================================
-  // 1. Mobile Navigation Menu Toggle
-  // ==========================================
-  const menuToggle = document.getElementById('menu-toggle');
-  const navMenu = document.getElementById('nav-menu');
-  const navLinks = document.querySelectorAll('.nav-menu a');
-  const menuIcon = menuToggle ? menuToggle.querySelector('i') : null;
+  // Theme Toggle Functionality
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const htmlElement = document.documentElement;
 
-  if (menuToggle && navMenu) {
-    // Open/Close menu on hamburger click
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      
-      if (menuIcon) {
-        if (navMenu.classList.contains('active')) {
-          menuIcon.classList.replace('fa-bars', 'fa-xmark');
-        } else {
-          menuIcon.classList.replace('fa-xmark', 'fa-bars');
-        }
-      }
-    });
-
-    // Close menu automatically when clicking any navigation link
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        if (menuIcon) {
-          menuIcon.classList.replace('fa-xmark', 'fa-bars');
-        }
-      });
-    });
-  }
-
-  // ==========================================
-  // 2. Dark / Light Theme Switcher
-  // ==========================================
-  const themeToggle = document.getElementById('theme-toggle');
-  const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
-
-  // Check saved theme in LocalStorage or system preferences
+  // Check saved theme or system preference
   const savedTheme = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-  // Apply dark mode on initial load if saved or preferred
-  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    if (themeIcon) {
-      themeIcon.classList.replace('fa-moon', 'fa-sun');
-    }
+  if (savedTheme) {
+    htmlElement.setAttribute('data-theme', savedTheme);
+  } else if (prefersDark) {
+    htmlElement.setAttribute('data-theme', dark);
   }
 
-  // Handle theme button click
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      
-      if (currentTheme === 'dark') {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.setItem('theme', 'light');
-        if (themeIcon) {
-          themeIcon.classList.replace('fa-sun', 'fa-moon');
-        }
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        if (themeIcon) {
-          themeIcon.classList.replace('fa-moon', 'fa-sun');
+  themeToggleBtn.addEventListener('click', () => {
+    const currentTheme = htmlElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    htmlElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+
+  // Mobile Menu Toggle
+  const menuToggleBtn = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Close Mobile Menu on Nav Item Click
+  document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', () => {
+      if (navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+      }
+    });
+  });
+
+  // Scroll Active Link Highlighting
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 80;
+      const sectionId = current.getAttribute('id');
+      const navItem = document.querySelector(`.nav-links a[href*=${sectionId}]`);
+
+      if (navItem) {
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          navItem.classList.add('active');
+        } else {
+          navItem.classList.remove('active');
         }
       }
     });
-  }
+  });
 });
