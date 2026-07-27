@@ -4,19 +4,28 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Lucide Icons if loaded
+    // Initialize Lucide Icons
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
 
     /* ----------------------------------------------------------------------
-       1. Theme Toggle System (Command Mode vs. Executive Mode)
+       1. Profile Image Fallback (Auto Placeholder if photo missing)
+       ---------------------------------------------------------------------- */
+    const profileImg = document.getElementById('profileImage');
+    if (profileImg) {
+        profileImg.addEventListener('error', function() {
+            this.src = 'https://ui-avatars.com/api/?name=Santosh+Bastola&background=0D1424&color=38BDF8&size=512&font-size=0.33&bold=true';
+        });
+    }
+
+    /* ----------------------------------------------------------------------
+       2. Theme Toggle System (Command Mode vs. Executive Mode)
        ---------------------------------------------------------------------- */
     const themeToggleBtn = document.getElementById('themeToggle');
     const themeIcon = document.getElementById('themeIcon');
     const htmlElement = document.documentElement;
 
-    // Check for saved theme preference or default to 'dark' (Command Mode)
     const savedTheme = localStorage.getItem('exec_portfolio_theme') || 'dark';
     htmlElement.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
@@ -45,13 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ----------------------------------------------------------------------
-       2. Sticky Navigation & Active Link Highlighting
+       3. Sticky Navigation & Active Link Highlighting
        ---------------------------------------------------------------------- */
     const header = document.querySelector('header');
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
 
-    // Add shadow on scroll
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.style.boxShadow = '0 10px 30px -10px rgba(0,0,0,0.3)';
@@ -81,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ----------------------------------------------------------------------
-       3. Mobile Navigation Menu Toggle
+       4. Mobile Navigation Menu Toggle
        ---------------------------------------------------------------------- */
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navMenu = document.querySelector('.nav-links');
@@ -106,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close mobile menu on link click
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 if (window.innerWidth <= 768) {
@@ -120,13 +127,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ----------------------------------------------------------------------
-       4. Scroll Reveal Animations (Intersection Observer)
+       5. Scroll Reveal Animations
        ---------------------------------------------------------------------- */
     const revealElements = document.querySelectorAll(
         '.value-card, .timeline-item, .expertise-card, .impact-card, .erp-card, .edu-card'
     );
 
-    // Initial styling for reveal elements
     revealElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
@@ -149,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => revealObserver.observe(el));
 
     /* ----------------------------------------------------------------------
-       5. Executive Metric Counter Animation
+       6. Executive Metric Counter Animation
        ---------------------------------------------------------------------- */
     const impactNumbers = document.querySelectorAll('.impact-number');
     let animated = false;
