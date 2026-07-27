@@ -1,153 +1,140 @@
-document.addEventListener('DOMContentLoaded', () => {
-  /* ==========================================
-     1. MOUSE FOLLOW GLOW EFFECT
-     ========================================== */
-  const mouseGlow = document.getElementById('mouseGlow');
-  if (mouseGlow && window.matchMedia('(pointer: fine)').matches) {
-    document.addEventListener('mousemove', (e) => {
-      mouseGlow.style.left = `${e.clientX}px`;
-      mouseGlow.style.top = `${e.clientY}px`;
-    });
-  }
+/* ================================
+   SANTOSH BASTOLA PORTFOLIO JS
+================================ */
 
-  /* ==========================================
-     2. THEME TOGGLE (COMMAND / EXECUTIVE MODE)
-     ========================================== */
-  const themeToggle = document.getElementById('themeToggle');
-  const themeText = themeToggle ? themeToggle.querySelector('.theme-text') : null;
-  const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
-  const htmlEl = document.documentElement;
+document.addEventListener("DOMContentLoaded", () => {
 
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const currentTheme = htmlEl.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      
-      htmlEl.setAttribute('data-theme', newTheme);
-      
-      if (newTheme === 'light') {
-        if (themeText) themeText.textContent = 'EXECUTIVE MODE';
-        if (themeIcon) themeIcon.className = 'fa-solid fa-sun';
-      } else {
-        if (themeText) themeText.textContent = 'COMMAND MODE';
-        if (themeIcon) themeIcon.className = 'fa-solid fa-moon';
-      }
-    });
-  }
+    /* ================================
+       SMOOTH SCROLL
+    ================================= */
 
-  /* ==========================================
-     3. MOBILE MENU TOGGLE
-     ========================================== */
-  const mobileToggle = document.getElementById('mobileToggle');
-  const navMenu = document.getElementById('navMenu');
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-  if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('mobile-open');
-      const icon = mobileToggle.querySelector('i');
-      if (icon) {
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-xmark');
-      }
-    });
+        anchor.addEventListener("click", function (event) {
 
-    // Close mobile menu on click
-    navMenu.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('mobile-open');
-        const icon = mobileToggle.querySelector('i');
-        if (icon) {
-          icon.classList.add('fa-bars');
-          icon.classList.remove('fa-xmark');
-        }
-      });
-    });
-  }
+            event.preventDefault();
 
-  /* ==========================================
-     4. SCROLL REVEAL ANIMATIONS
-     ========================================== */
-  const revealElements = document.querySelectorAll('.reveal-up, .reveal-slide-in');
+            const target = document.querySelector(this.getAttribute("href"));
 
-  const revealOnScroll = () => {
-    const windowHeight = window.innerHeight;
-    const elementVisible = 100;
+            if (target) {
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
 
-    revealElements.forEach((el) => {
-      const elementTop = el.getBoundingClientRect().top;
-      if (elementTop < windowHeight - elementVisible) {
-        el.classList.add('reveal-active');
-      }
-    });
-  };
-
-  window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll(); // Trigger once on load
-
-  /* ==========================================
-     5. ACTIVE NAVIGATION TRACKING
-     ========================================== */
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  const highlightNavOnScroll = () => {
-    const scrollY = window.pageYOffset;
-
-    sections.forEach((current) => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 120;
-      const sectionId = current.getAttribute('id');
-
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        navLinks.forEach((link) => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
-          }
         });
-      }
+
     });
-  };
 
-  window.addEventListener('scroll', highlightNavOnScroll);
 
-  /* ==========================================
-     6. METRIC COUNT-UP ANIMATION
-     ========================================== */
-  const counters = document.querySelectorAll('.counter');
-  let animated = false;
+    /* ================================
+       SCROLL REVEAL ANIMATION
+    ================================= */
 
-  const startCounters = () => {
-    const impactSection = document.getElementById('impact');
-    if (!impactSection) return;
+    const revealElements = document.querySelectorAll(
+        ".section, .experience-card, .skill-card, .card"
+    );
 
-    const sectionPos = impactSection.getBoundingClientRect().top;
-    const screenPos = window.innerHeight;
+    const observer = new IntersectionObserver(
 
-    if (sectionPos < screenPos && !animated) {
-      counters.forEach((counter) => {
-        const target = +counter.getAttribute('data-target');
-        const duration = 1500; // ms
-        const increment = target / (duration / 16);
+        (entries, observer) => {
 
-        let currentCount = 0;
+            entries.forEach(entry => {
 
-        const updateCount = () => {
-          currentCount += increment;
-          if (currentCount < target) {
-            counter.innerText = Math.ceil(currentCount);
-            setTimeout(updateCount, 16);
-          } else {
-            counter.innerText = target;
-          }
-        };
+                if (entry.isIntersecting) {
 
-        updateCount();
-      });
-      animated = true;
+                    entry.target.classList.add("show");
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.15
+        }
+
+    );
+
+    revealElements.forEach(element => {
+        observer.observe(element);
+    });
+
+
+    /* ================================
+       ACTIVE NAVIGATION LINK
+    ================================= */
+
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-menu a");
+
+    window.addEventListener("scroll", () => {
+
+        let currentSection = "";
+
+        sections.forEach(section => {
+
+            const sectionTop = section.offsetTop - 150;
+            const sectionHeight = section.offsetHeight;
+
+            if (
+                window.scrollY >= sectionTop &&
+                window.scrollY < sectionTop + sectionHeight
+            ) {
+                currentSection = section.getAttribute("id");
+            }
+
+        });
+
+        navLinks.forEach(link => {
+
+            link.classList.remove("active");
+
+            if (
+                link.getAttribute("href") === `#${currentSection}`
+            ) {
+                link.classList.add("active");
+            }
+
+        });
+
+    });
+
+
+    /* ================================
+       DYNAMIC FOOTER YEAR
+    ================================= */
+
+    const footerText = document.querySelector("footer p");
+
+    if (footerText) {
+
+        const currentYear = new Date().getFullYear();
+
+        footerText.innerHTML =
+            `© ${currentYear} Santosh Bastola | Inventory & Procurement Manager`;
+
     }
-  };
 
-  window.addEventListener('scroll', startCounters);
-  startCounters(); // Check on initial view
+
+    /* ================================
+       BUTTON CLICK FEEDBACK
+    ================================= */
+
+    const downloadButton = document.querySelector(".cv");
+
+    if (downloadButton) {
+
+        downloadButton.addEventListener("click", () => {
+
+            console.log("CV download initiated.");
+
+        });
+
+    }
+
 });
