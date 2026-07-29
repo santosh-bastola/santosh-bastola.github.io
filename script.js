@@ -1,101 +1,315 @@
-document.addEventListener('DOMContentLoaded', () => {
-  
-  // ==========================================================================
-  // 1. Theme Toggle (Command Mode Switcher)
-  // ==========================================================================
-  const themeToggle = document.getElementById('themeToggle');
+document.addEventListener("DOMContentLoaded", () => {
 
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      // Fallback to 'dark' if data-theme attribute is not set initially
-      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      
-      // Update data-theme on <html> tag
-      document.documentElement.setAttribute('data-theme', newTheme);
-      
-      // Select elements inside toggle button dynamically
-      const themeIcon = themeToggle.querySelector('i');
-      const themeText = themeToggle.querySelector('.theme-text');
+    // ==========================================================================
+    // 1. THEME TOGGLE + SAVE THEME
+    // ==========================================================================
 
-      // Update Button Icon & Text
-      if (newTheme === 'light') {
-        if (themeIcon) themeIcon.className = 'fa-solid fa-sun';
-        if (themeText) themeText.textContent = 'STANDARD MODE';
-      } else {
-        if (themeIcon) themeIcon.className = 'fa-solid fa-moon';
-        if (themeText) themeText.textContent = 'COMMAND MODE';
-      }
-    });
-  }
+    const themeToggle = document.getElementById("themeToggle");
 
-  // ==========================================================================
-  // 2. Mobile Menu Toggle
-  // ==========================================================================
-  const mobileToggle = document.getElementById('mobileToggle');
-  const navMenu = document.getElementById('navMenu');
+    if (themeToggle) {
 
-  if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      const icon = mobileToggle.querySelector('i');
-      if (icon) {
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-xmark');
-      }
-    });
-  }
+        const themeIcon = themeToggle.querySelector("i");
+        const themeText = themeToggle.querySelector(".theme-text");
 
-  // ==========================================================================
-  // 3. Subtly Glowing Mouse Follower
-  // ==========================================================================
-  const mouseGlow = document.getElementById('mouseGlow');
+        // Load saved theme
+        const savedTheme = localStorage.getItem("theme");
 
-  if (mouseGlow) {
-    window.addEventListener('mousemove', (e) => {
-      // Direct positioning via client coordinates for tight tracking
-      mouseGlow.style.left = `${e.clientX}px`;
-      mouseGlow.style.top = `${e.clientY}px`;
-    });
-  }
+        if (savedTheme) {
 
-  // ==========================================================================
-  // 4. Number Counters Animation (for Impact Section)
-  // ==========================================================================
-  const counters = document.querySelectorAll('.counter');
-  let animated = false;
+            document.documentElement.setAttribute("data-theme", savedTheme);
 
-  const animateCounters = () => {
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      const speed = 200; 
-      const increment = target / speed;
+            if (savedTheme === "light") {
 
-      const updateCount = () => {
-        const count = +counter.innerText;
-        if (count < target) {
-          counter.innerText = Math.ceil(count + increment);
-          setTimeout(updateCount, 15);
-        } else {
-          counter.innerText = target;
+                if (themeIcon) themeIcon.className = "fa-solid fa-sun";
+                if (themeText) themeText.textContent = "STANDARD MODE";
+
+            } else {
+
+                if (themeIcon) themeIcon.className = "fa-solid fa-moon";
+                if (themeText) themeText.textContent = "COMMAND MODE";
+
+            }
+
         }
-      };
 
-      updateCount();
-    });
-  };
+        themeToggle.addEventListener("click", () => {
 
-  // Trigger counters when scrolled into view
-  const impactSection = document.getElementById('impact');
-  if (impactSection) {
-    window.addEventListener('scroll', () => {
-      const sectionPos = impactSection.getBoundingClientRect().top;
-      const screenPos = window.innerHeight / 1.3;
+            const currentTheme =
+                document.documentElement.getAttribute("data-theme") || "dark";
 
-      if (sectionPos < screenPos && !animated) {
-        animateCounters();
-        animated = true;
-      }
-    });
-  }
+            const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+            document.documentElement.setAttribute("data-theme", newTheme);
+
+            localStorage.setItem("theme", newTheme);
+
+            if (newTheme === "light") {
+
+                if (themeIcon) themeIcon.className = "fa-solid fa-sun";
+                if (themeText) themeText.textContent = "STANDARD MODE";
+
+            } else {
+
+                if (themeIcon) themeIcon.className = "fa-solid fa-moon";
+                if (themeText) themeText.textContent = "COMMAND MODE";
+
+            }
+
+        });
+
+    }
+
+    // ==========================================================================
+    // 2. MOBILE MENU
+    // ==========================================================================
+
+    const mobileToggle = document.getElementById("mobileToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    if (mobileToggle && navMenu) {
+
+        mobileToggle.addEventListener("click", () => {
+
+            navMenu.classList.toggle("active");
+
+            const icon = mobileToggle.querySelector("i");
+
+            if (icon) {
+
+                icon.classList.toggle("fa-bars");
+                icon.classList.toggle("fa-xmark");
+
+            }
+
+        });
+
+        // Close menu after clicking link
+
+        document.querySelectorAll(".nav-link").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navMenu.classList.remove("active");
+
+                const icon = mobileToggle.querySelector("i");
+
+                if (icon) {
+
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+
+                }
+
+            });
+
+        });
+
+    }
+
+    // ==========================================================================
+    // 3. SMOOTH MOUSE GLOW
+    // ==========================================================================
+
+    const mouseGlow = document.getElementById("mouseGlow");
+
+    if (mouseGlow) {
+
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+
+        window.addEventListener("mousemove", (e) => {
+
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+
+        });
+
+        function animateGlow() {
+
+            mouseGlow.style.transform =
+                `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+
+            requestAnimationFrame(animateGlow);
+
+        }
+
+        animateGlow();
+
+    }
+
+    // ==========================================================================
+    // 4. COUNTER ANIMATION
+    // ==========================================================================
+
+    const counters = document.querySelectorAll(".counter");
+
+    let animated = false;
+
+    function animateCounters() {
+
+        counters.forEach(counter => {
+
+            const target = Number(counter.dataset.target);
+
+            let current = 0;
+
+            const duration = 1800;
+
+            const start = performance.now();
+
+            function update(now) {
+
+                const progress = Math.min((now - start) / duration, 1);
+
+                current = Math.ceil(progress * target);
+
+                counter.textContent = current;
+
+                if (progress < 1) {
+
+                    requestAnimationFrame(update);
+
+                } else {
+
+                    counter.textContent = target;
+
+                }
+
+            }
+
+            requestAnimationFrame(update);
+
+        });
+
+    }
+
+    const impactSection = document.getElementById("impact");
+
+    if (impactSection) {
+
+        const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting && !animated) {
+
+                    animateCounters();
+
+                    animated = true;
+
+                    observer.disconnect();
+
+                }
+
+            });
+
+        }, {
+
+            threshold: 0.3
+
+        });
+
+        observer.observe(impactSection);
+
+    }
+
+    // ==========================================================================
+    // 5. SCROLL REVEAL ANIMATION
+    // ==========================================================================
+
+    const reveals = document.querySelectorAll(
+
+        ".reveal-up, .reveal-slide-in"
+
+    );
+
+    if (reveals.length) {
+
+        const revealObserver = new IntersectionObserver((entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                }
+
+            });
+
+        }, {
+
+            threshold: 0.15
+
+        });
+
+        reveals.forEach(item => revealObserver.observe(item));
+
+    }
+
+    // ==========================================================================
+    // 6. ACTIVE NAVIGATION
+    // ==========================================================================
+
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    function updateActiveNav() {
+
+        let current = "";
+
+        sections.forEach(section => {
+
+            const top = section.offsetTop - 120;
+            const height = section.offsetHeight;
+
+            if (window.scrollY >= top &&
+                window.scrollY < top + height) {
+
+                current = section.id;
+
+            }
+
+        });
+
+        navLinks.forEach(link => {
+
+            link.classList.remove("active");
+
+            if (link.getAttribute("href") === "#" + current) {
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    }
+
+    window.addEventListener("scroll", updateActiveNav);
+
+    updateActiveNav();
+
+    // ==========================================================================
+    // 7. NAVBAR SCROLL EFFECT
+    // ==========================================================================
+
+    const navbar = document.getElementById("navbar");
+
+    if (navbar) {
+
+        window.addEventListener("scroll", () => {
+
+            navbar.classList.toggle(
+
+                "scrolled",
+
+                window.scrollY > 40
+
+            );
+
+        });
+
+    }
+
 });
