@@ -1049,3 +1049,31 @@ ul {
     text-align: center;
   }
 }
+/* Reveal Animation */
+
+.reveal-up,
+.reveal-slide-in{
+    opacity:0;
+    transition:all .8s ease;
+}
+
+.reveal-up{
+    transform:translateY(60px);
+}
+
+.reveal-slide-in{
+    transform:translateX(60px);
+}
+
+.show{
+    opacity:1;
+    transform:translate(0,0);
+}
+
+/* Navbar Scroll */
+
+.navbar.scrolled{
+    backdrop-filter:blur(24px);
+    background:rgba(10,13,20,.95);
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
