@@ -1,7 +1,10 @@
 /* ==========================================================================
    RESET & GLOBAL VARIABLES
    ========================================================================== */
-:root {
+
+/* Dark Mode (Default) */
+:root,
+[data-theme="dark"] {
   --bg-primary: #0a0d14;
   --bg-secondary: #121824;
   --bg-card: rgba(20, 27, 41, 0.7);
@@ -22,6 +25,23 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Light Mode (Standard Mode) */
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #edf2f7;
+  --bg-card: #ffffff;
+  --border-color: #cbd5e1;
+  
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-accent: #0284c7;
+  --text-cyan: #0891b2;
+  --text-gold: #d97706;
+  
+  --primary: #2563eb;
+  --primary-glow: rgba(37, 99, 235, 0.15);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -39,9 +59,27 @@ html {
 body {
   overflow-x: hidden;
   position: relative;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
 }
 
-/* Mouse Glow Effect */
+/* Smooth theme transition across elements */
+body, 
+.navbar, 
+.command-card, 
+.value-card, 
+.expertise-card, 
+.impact-card, 
+.erp-card, 
+.glass-panel,
+.hero-metric,
+.chain-container,
+.contact-info-panel,
+.contact-btn {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Subtly Glowing Mouse Follower */
 .mouse-glow {
   position: fixed;
   top: 0;
@@ -53,7 +91,7 @@ body {
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 0;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 /* Base Utility Classes */
@@ -69,7 +107,7 @@ ul {
 .text-accent { color: var(--text-accent); }
 .text-cyan { color: var(--text-cyan); }
 .text-gold { color: var(--text-gold); }
-.highlight { color: #34d399; font-weight: 600; }
+.highlight { color: #10b981; font-weight: 600; }
 
 .section-container {
   max-width: 1200px;
@@ -138,9 +176,17 @@ ul {
   color: var(--text-main);
 }
 
+[data-theme="light"] .btn-secondary {
+  background: rgba(0, 0, 0, 0.05);
+}
+
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: var(--text-muted);
+}
+
+[data-theme="light"] .btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.08);
 }
 
 /* ==========================================================================
@@ -155,6 +201,10 @@ ul {
   background: rgba(10, 13, 20, 0.85);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .navbar {
+  background: rgba(248, 250, 252, 0.85);
 }
 
 .nav-container {
@@ -219,6 +269,10 @@ ul {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   cursor: pointer;
+}
+
+[data-theme="light"] .theme-toggle {
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .mobile-toggle {
@@ -314,6 +368,10 @@ ul {
   border-radius: 4px;
 }
 
+[data-theme="light"] .chain-step {
+  background: rgba(0, 0, 0, 0.05);
+}
+
 .chain-arrow {
   color: var(--text-muted);
   font-size: 0.7rem;
@@ -357,7 +415,7 @@ ul {
   border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 24px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .card-header {
@@ -575,7 +633,7 @@ ul {
 }
 
 .expertise-card:hover {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: var(--text-accent);
   background: var(--bg-secondary);
 }
 
@@ -761,7 +819,7 @@ ul {
 
 .erp-title {
   font-size: 2rem;
-  color: #ffffff;
+  color: var(--text-main);
 }
 
 .erp-sub {
@@ -788,6 +846,10 @@ ul {
   background: rgba(255, 255, 255, 0.05);
   padding: 4px 8px;
   border-radius: 4px;
+}
+
+[data-theme="light"] .erp-tags span {
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .erp-process {
@@ -953,7 +1015,20 @@ ul {
 
 @media (max-width: 768px) {
   .nav-menu {
-    display: none; /* Can be toggled with JS */
+    display: none;
+  }
+  
+  .nav-menu.active {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--bg-secondary);
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   }
   
   .mobile-toggle {
