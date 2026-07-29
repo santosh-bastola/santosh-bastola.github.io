@@ -1,16 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
+  
+  // ==========================================================================
   // 1. Theme Toggle (Command Mode Switcher)
+  // ==========================================================================
   const themeToggle = document.getElementById('themeToggle');
-  const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
-  const themeText = themeToggle ? themeToggle.querySelector('.theme-text') : null;
 
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
+      // Fallback to 'dark' if data-theme attribute is not set initially
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       
+      // Update data-theme on <html> tag
       document.documentElement.setAttribute('data-theme', newTheme);
       
+      // Select elements inside toggle button dynamically
+      const themeIcon = themeToggle.querySelector('i');
+      const themeText = themeToggle.querySelector('.theme-text');
+
       // Update Button Icon & Text
       if (newTheme === 'light') {
         if (themeIcon) themeIcon.className = 'fa-solid fa-sun';
@@ -22,7 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ==========================================================================
   // 2. Mobile Menu Toggle
+  // ==========================================================================
   const mobileToggle = document.getElementById('mobileToggle');
   const navMenu = document.getElementById('navMenu');
 
@@ -37,16 +46,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ==========================================================================
   // 3. Subtly Glowing Mouse Follower
+  // ==========================================================================
   const mouseGlow = document.getElementById('mouseGlow');
+
   if (mouseGlow) {
     window.addEventListener('mousemove', (e) => {
+      // Direct positioning via client coordinates for tight tracking
       mouseGlow.style.left = `${e.clientX}px`;
       mouseGlow.style.top = `${e.clientY}px`;
     });
   }
 
+  // ==========================================================================
   // 4. Number Counters Animation (for Impact Section)
+  // ==========================================================================
   const counters = document.querySelectorAll('.counter');
   let animated = false;
 
@@ -70,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // Trigger counters on Scroll
+  // Trigger counters when scrolled into view
   const impactSection = document.getElementById('impact');
   if (impactSection) {
     window.addEventListener('scroll', () => {
