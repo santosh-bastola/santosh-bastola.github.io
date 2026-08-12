@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://santosh-bastola.com.np/sitemap.xml
