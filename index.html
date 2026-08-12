@@ -1,174 +1,819 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Santosh Bastola | Inventory & Procurement Manager</title>
-  <meta name="description" content="Santosh Bastola — Inventory & Procurement Manager with 10+ years of experience in inventory, procurement, supply chain, logistics, SAP MM, SAP PP and ERP operations.">
-  <meta name="keywords" content="Santosh Bastola, Inventory Manager, Procurement Manager, Supply Chain, SAP MM, SAP PP, ERP, Nepal, Biratnagar">
-  <meta name="author" content="Santosh Bastola">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0a0d12">
-  <link rel="canonical" href="https://santosh-bastola.com.np/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Santosh Bastola | Inventory & Procurement Manager">
-  <meta property="og:description" content="Professional portfolio of Santosh Bastola — Inventory, Procurement, Supply Chain, Logistics & ERP.">
-  <meta property="og:url" content="https://santosh-bastola.com.np/">
-  <meta property="og:image" content="https://santosh-bastola.com.np/profile.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="profile.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Santosh Bastola",
-    "url":"https://santosh-bastola.com.np/",
-    "jobTitle":"Inventory & Procurement Manager",
-    "email":"mailto:bastolasantosh1993@outlook.com",
-    "telephone":"+9779852021299",
-    "address":{"@type":"PostalAddress","addressLocality":"Biratnagar","addressCountry":"NP"},
-    "knowsAbout":["Inventory Management","Procurement","Supply Chain","Logistics","SAP MM","SAP PP","ERP"]
-  }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santosh Bastola | Portfolio & CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #0b0f19;
+            --card-bg: #111827;
+            --card-border: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --gold-gradient: linear-gradient(135deg, #FFE082 0%, #FFB300 40%, #D84315 100%);
+            --gold-text: linear-gradient(to right, #FFE57F, #FFC107, #FF8F00, #FFE57F);
+            --whatsapp: #25D366;
+            --badge-bg: #1e293b;
+            --badge-text: #cbd5e1;
+            --hero-bg: linear-gradient(135deg, #111827 0%, #1c1917 100%);
+            --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        [data-theme="light"] {
+            --bg: #fdfbf7;
+            --card-bg: #ffffff;
+            --card-border: #e2e8f0;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --gold-gradient: linear-gradient(135deg, #FFB300 0%, #B45309 100%);
+            --gold-text: linear-gradient(to right, #B45309, #D97706, #B45309);
+            --whatsapp: #25D366;
+            --badge-bg: #f1f5f9;
+            --badge-text: #334155;
+            --hero-bg: linear-gradient(135deg, #ffffff 0%, #fffbebe6 100%);
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px 15px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Top Navigation Bar */
+        .top-nav {
+            position: sticky;
+            top: 10px;
+            z-index: 900;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 40px;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 10px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-main);
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-tab-btn:hover, .nav-tab-btn.active {
+            background: rgba(255, 193, 7, 0.15);
+            color: #FFC107;
+            border: 1px solid #FFC107;
+        }
+
+        .theme-toggle-btn {
+            background: transparent;
+            border: 1px solid var(--card-border);
+            color: var(--text-main);
+            padding: 6px 14px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .theme-toggle-btn:hover {
+            border-color: #FFC107;
+            color: #FFC107;
+        }
+
+        /* Header / Hero Section */
+        .hero {
+            background: var(--hero-bg);
+            border: 1px solid var(--card-border);
+            padding: 35px;
+            border-radius: 24px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-left {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .profile-img-wrap {
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            padding: 4px;
+            background: var(--gold-gradient);
+            flex-shrink: 0;
+            box-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
+        }
+
+        .profile-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            background-color: var(--card-bg);
+        }
+
+        .hero-text h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            background: var(--gold-text);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text p {
+            color: #FFC107;
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-top: 4px;
+        }
+
+        /* Animated Number Stats */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-box {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 22px 18px;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+            border-color: #FFC107;
+        }
+
+        .stat-box h3 {
+            font-size: 2.3rem;
+            font-weight: 800;
+            background: var(--gold-text);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-box p.stat-title {
+            color: var(--text-main);
+            font-size: 0.92rem;
+            font-weight: 700;
+            margin-top: 2px;
+        }
+
+        .stat-box p.stat-sub {
+            color: #FFC107;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        /* SECTION VISIBILITY CONTROL */
+        .tab-section {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .tab-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Card Section Styling */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 28px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-main);
+        }
+
+        .card-title i {
+            color: #FFC107;
+        }
+
+        .summary-p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        /* Main Current Role Box */
+        .main-top-box {
+            background: linear-gradient(135deg, var(--bg) 0%, rgba(255, 193, 7, 0.1) 100%);
+            border: 2px solid #FFC107;
+            border-radius: 18px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(255, 193, 7, 0.2);
+        }
+
+        .top-badge {
+            background: #FFC107;
+            color: #000;
+            font-size: 0.78rem;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .role-title { color: var(--text-main); font-weight: 800; font-size: 1.2rem; margin-bottom: 2px; text-align: center; }
+        .institution-name { color: #FFC107; font-weight: 700; font-size: 1.05rem; text-align: center; }
+        .sub-details { color: var(--text-muted); font-size: 0.85rem; margin-top: 4px; text-align: center; }
+
+        .up-arrow-divider {
+            text-align: center;
+            margin: 18px 0;
+            color: #FFC107;
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .up-arrow-divider span { 
+            font-size: 0.75rem; 
+            color: var(--text-muted); 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .step-arrow-divider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 12px 0;
+            color: #FFC107;
+            font-size: 1.4rem;
+            animation: bounce 1.8s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(5px); }
+        }
+
+        .flow-vertical-stack {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .edu-two-col-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .step-box {
+            background: var(--bg);
+            border: 1px solid var(--card-border);
+            padding: 22px 20px;
+            border-radius: 16px;
+            text-align: left;
+            width: 100%;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .step-box:hover { 
+            border-color: #FFC107; 
+            transform: translateY(-2px); 
+        }
+
+        .step-num { display: inline-block; font-size: 0.72rem; font-weight: 800; color: #FFC107; text-transform: uppercase; margin-bottom: 6px; }
+
+        ul.resp-list {
+            list-style: none;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px dashed var(--card-border);
+            text-align: left;
+        }
+
+        ul.resp-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        ul.resp-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #FFC107;
+            font-weight: bold;
+        }
+
+        .grid-two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .badge-group { display: flex; flex-wrap: wrap; gap: 8px; }
+        .badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            padding: 7px 14px;
+            border-radius: 30px;
+            font-size: 0.83rem;
+            font-weight: 600;
+            border: 1px solid var(--card-border);
+        }
+
+        ul.bullets { list-style: none; font-size: 0.9rem; color: var(--text-muted); }
+        ul.bullets li { position: relative; padding-left: 18px; margin-bottom: 8px; }
+        ul.bullets li::before { content: '▹'; position: absolute; left: 0; color: #FFC107; }
+
+        .contact-card-section {
+            background: var(--card-bg);
+            border: 2px solid #FFC107;
+            padding: 35px;
+            border-radius: 24px;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 25px rgba(255, 193, 7, 0.15);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .contact-item {
+            background: var(--bg);
+            border: 1px solid var(--card-border);
+            padding: 22px 15px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .contact-item:hover { border-color: #FFC107; transform: translateY(-4px); }
+        .contact-item i { font-size: 1.8rem; color: #FFC107; }
+        .contact-item.wa i { color: var(--whatsapp); }
+
+        .contact-item span.title { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; }
+        
+        .contact-item span.value { 
+            font-weight: 700; 
+            font-size: 0.88rem; 
+            display: block;
+            width: 100%;
+            word-break: break-all;
+            margin-top: 2px;
+            line-height: 1.4;
+        }
+
+        footer { text-align: center; margin-top: 20px; color: var(--text-muted); font-size: 0.85rem; }
+
+        @media (max-width: 900px) {
+            .contact-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 850px) {
+            .top-nav { flex-direction: column; justify-content: center; }
+            .nav-links { justify-content: center; }
+            .hero { text-align: center; flex-direction: column; }
+            .hero-left { flex-direction: column; }
+            .grid-two-col, .edu-two-col-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-<header class="site-header" id="top">
-  <a class="logo" href="#home" aria-label="Santosh Bastola home"><span>SB</span><b>SANTOSH BASTOLA</b></a>
-  <button class="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-  <nav class="nav" aria-label="Main navigation">
-    <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a>
-    <a href="#highlights">Highlights</a><a href="#contact" class="nav-button">Let's Talk</a>
-  </nav>
-</header>
 
-<main>
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-copy reveal">
-    <div class="kicker"><i></i> INVENTORY • PROCUREMENT • SUPPLY CHAIN</div>
-    <h1>Turning material flow into <em>business control.</em></h1>
-    <p class="hero-lead">Inventory & Procurement Manager with 10+ years of practical experience across manufacturing, procurement, warehouse operations, supply chain coordination, logistics and ERP-based information management.</p>
-    <div class="hero-actions">
-      <a class="button button-light" href="Santosh-Bastola-CV.pdf" download>Download CV <span>↓</span></a>
-      <a class="button button-outline" href="#experience">View Career <span>↘</span></a>
+    <div class="container">
+        
+        <!-- Navigation Bar -->
+        <div class="top-nav">
+            <div class="nav-links">
+                <button class="nav-tab-btn active" onclick="showTab('about', this)"><i class="fa-solid fa-user"></i> About</button>
+                <button class="nav-tab-btn" onclick="showTab('experience', this)"><i class="fa-solid fa-briefcase"></i> Experience</button>
+                <button class="nav-tab-btn" onclick="showTab('education', this)"><i class="fa-solid fa-graduation-cap"></i> Education</button>
+                <button class="nav-tab-btn" onclick="showTab('skills', this)"><i class="fa-solid fa-gears"></i> Skills</button>
+                <button class="nav-tab-btn" onclick="showTab('contact-tab', this)"><i class="fa-solid fa-address-book"></i> Contact</button>
+            </div>
+
+            <button class="theme-toggle-btn" id="themeToggleBtn">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
+                <span id="themeText">Light Mode</span>
+            </button>
+        </div>
+
+        <!-- Header / Hero Section (Linked with GitHub profile.jpg) -->
+        <div class="hero">
+            <div class="hero-left">
+                <div class="profile-img-wrap">
+                    <img src="profile.jpg" alt="Santosh Bastola">
+                </div>
+                <div class="hero-text">
+                    <h1>SANTOSH BASTOLA</h1>
+                    <p>Procurement, Import & Inventory Operations Lead</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Animated Number Counter Cards -->
+        <div class="stats-container">
+            <div class="stat-box">
+                <h3 class="counter" data-target="10">0</h3>
+                <p class="stat-title">Years Experience</p>
+                <p class="stat-sub">Manufacturing & Trading</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="counter" data-target="100">0</h3>
+                <p class="stat-title">Local Vendors (Purchase)</p>
+                <p class="stat-sub">Turnover: NPR 80–90 Lakhs/Yr</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="counter" data-target="50">0</h3>
+                <p class="stat-title">Foreign Vendors (Import)</p>
+                <p class="stat-sub">Turnover: $40K–$50K/Yr</p>
+            </div>
+            <div class="stat-box">
+                <h3 class="counter" data-target="150">0</h3>
+                <p class="stat-title">Total Vendors Managed</p>
+                <p class="stat-sub">End-to-End Supply Chain</p>
+            </div>
+        </div>
+
+        <!-- TAB 1: ABOUT -->
+        <div id="about" class="tab-section active">
+            <div class="card">
+                <div class="card-title"><i class="fa-solid fa-user-tie"></i> Executive Professional Summary</div>
+                <p class="summary-p">
+                    Highly accomplished and result-driven Procurement, Import & Inventory Operations Lead with over 10 years of extensive hands-on experience spanning both manufacturing and trading sectors[cite: 1]. Proven track record in orchestrating local/foreign purchasing, Letters of Credit (LC), import customs clearance, and Tarpaulin unit store/inventory control operations.
+                </p>
+                <p class="summary-p">
+                    Possesses high proficiency across multiple Enterprise Resource Planning (ERP) platforms, including SAP MM (Materials Management), SAP PP (Production Planning), Tally Prime, Tally ERP, and Power Brain ERP[cite: 1]. Expert in Microsoft 365 online cloud sheets control, data visualization, physical stock reconciliation, and cross-functional coordination with CFOs, Corporate Officers, Purchase, and Production teams[cite: 1].
+                </p>
+            </div>
+        </div>
+
+        <!-- TAB 2: EXPERIENCE -->
+        <div id="experience" class="tab-section">
+            <div class="card">
+                <div class="card-title"><i class="fa-solid fa-arrow-trend-up"></i> Work Experience Progression Path</div>
+                
+                <!-- 1. MAIN CURRENT ROLE BOX -->
+                <div class="main-top-box">
+                    <span class="top-badge">👑 Main Current Role (Dec 2023 – Present)</span>
+                    <h3 class="role-title">Procurement, Import & Inventory Operations Lead</h3>
+                    <p class="institution-name">Golyan Group - Shivam Plastic Industry Limited[cite: 1]</p>
+                    <p class="sub-details"><i class="fa-regular fa-calendar"></i> Dec 2023 – Present | Biratnagar, Nepal[cite: 1]</p>
+                    
+                    <ul class="resp-list">
+                        <li><strong>Purchase & Vendor Management:</strong> Negotiating terms and leading procurement operations for local (100+) and foreign (50+) suppliers[cite: 1].</li>
+                        <li><strong>Import & International Logistics:</strong> Handling import documentation, Letter of Credit (LC) opening, customs clearance, and Air/Sea freight logistics[cite: 1].</li>
+                        <li><strong>Inventory & Store Spares Control:</strong> Managing Tarpaulin production unit inventory flow, store spares consumption, and conducting regular physical stock reconciliation[cite: 1].</li>
+                        <li><strong>ERP Posting & Verification:</strong> Verifying daily production output and posting raw material issues and store consumption in SAP MM/PP & Tally Prime[cite: 1].</li>
+                        <li><strong>Microsoft 365 Analytics & Coordination:</strong> Controlling live collaborative cloud sheets, preparing visual reports for CFOs, and coordinating with Purchase, Production, and Sales teams[cite: 1].</li>
+                    </ul>
+                </div>
+
+                <!-- ARROW DIVIDER -->
+                <div class="up-arrow-divider">
+                    <i class="fa-solid fa-circle-arrow-down" style="font-size: 1.8rem; color: #FFC107;"></i>
+                    <span>Previous Professional Experience Path</span>
+                </div>
+
+                <!-- 2. PREVIOUS ROLES VERTICAL STACK -->
+                <div class="flow-vertical-stack">
+                    <div class="step-box">
+                        <span class="step-num">Step 3 (2022 - 2023)</span>
+                        <h4 style="font-size: 1.05rem; color: var(--text-main); font-weight: 800;">Materials & Supply Chain Head</h4>
+                        <p style="color: #FFC107; font-weight: 700; font-size: 0.9rem;">Maa Jagadamba Plasto Udyog[cite: 1]</p>
+                        
+                        <ul class="resp-list">
+                            <li>Controlled inventory databases, material flow, and production entries in Power Brain ERP[cite: 1].</li>
+                            <li>Directed supplier coordination, import documentation, and LC customs clearance workflows[cite: 1].</li>
+                            <li>Prepared operational updates and analytical inventory reports directly for company Directors[cite: 1].</li>
+                        </ul>
+                    </div>
+
+                    <div class="step-arrow-divider">
+                        <i class="fa-solid fa-circle-arrow-down"></i>
+                    </div>
+
+                    <div class="step-box">
+                        <span class="step-num">Step 2 (2015 - 2022)</span>
+                        <h4 style="font-size: 1.05rem; color: var(--text-main); font-weight: 800;">Supply Chain & Procurement Lead</h4>
+                        <p style="color: #FFC107; font-weight: 700; font-size: 0.9rem;">Shivam Footwears Pvt. Ltd.[cite: 1]</p>
+                        
+                        <ul class="resp-list">
+                            <li>Managed full warehouse operations, raw material availability, and finished goods stock control[cite: 1].</li>
+                            <li>Issued Purchase Orders, negotiated vendor pricing/delivery, and maintained Power Brain ERP records[cite: 1].</li>
+                            <li>Handled import documentation, LC/RTGS processing, customs clearance, and Air/Sea freight forwarders[cite: 1].</li>
+                        </ul>
+                    </div>
+
+                    <div class="step-arrow-divider">
+                        <i class="fa-solid fa-circle-arrow-down"></i>
+                    </div>
+
+                    <div class="step-box">
+                        <span class="step-num">Step 1 (2012 - 2015)</span>
+                        <h4 style="font-size: 1.05rem; color: var(--text-main); font-weight: 800;">Operations & Accounts Assistant</h4>
+                        <p style="color: #FFC107; font-weight: 700; font-size: 0.9rem;">New GS Mobile Palace[cite: 1]</p>
+                        
+                        <ul class="resp-list">
+                            <li>Handled daily store operations, accounting transactions, and VAT bill preparation[cite: 1].</li>
+                            <li>Posted daily transactions, vendor ledgers, and sales documentation in Tally accounting software[cite: 1].</li>
+                            <li>Managed local payment collections, customer transaction records, and bank deposits[cite: 1].</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TAB 3: EDUCATION -->
+        <div id="education" class="tab-section">
+            <div class="card">
+                <div class="card-title"><i class="fa-solid fa-sitemap"></i> Educational Progression Hierarchy</div>
+                
+                <div class="edu-two-col-grid">
+                    <div class="step-box">
+                        <span class="step-num">Level 1 (School Level)</span>
+                        <h4 style="font-size: 1.05rem; color: var(--text-main); font-weight: 800;">School Leaving Certificate (SLC)</h4>
+                        <p style="color: #FFC107; font-weight: 700; font-size: 0.9rem;">Saraswati Higher Sec. School[cite: 1]</p>
+                        <span class="sub-details" style="font-size: 0.8rem; display: block; text-align: left;">Nepal Board[cite: 1]</span>
+                    </div>
+
+                    <div class="step-box">
+                        <span class="step-num">Level 2 (Higher Secondary)</span>
+                        <h4 style="font-size: 1.05rem; color: var(--text-main); font-weight: 800;">10+2 (Management)</h4>
+                        <p style="color: #FFC107; font-weight: 700; font-size: 0.9rem;">City Higher Sec. School[cite: 1]</p>
+                        <span class="sub-details" style="font-size: 0.8rem; display: block; text-align: left;">HSEB Board[cite: 1]</span>
+                    </div>
+                </div>
+
+                <div class="up-arrow-divider">
+                    <i class="fa-solid fa-circle-arrow-down" style="font-size: 1.8rem; color: #FFC107;"></i>
+                    <span>Academic Progression to Graduation</span>
+                </div>
+
+                <div class="main-top-box">
+                    <span class="top-badge">👑 Highest Qualification (Graduation)</span>
+                    <h3 class="role-title">Bachelor of Business Studies (BBS)</h3>
+                    <p class="institution-name">Tribhuvan University (TU)[cite: 1]</p>
+                    <p class="sub-details">Birat Campus, Biratnagar, Nepal[cite: 1]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 4: SKILLS & TOOLS -->
+        <div id="skills" class="tab-section">
+            <div class="grid-two-col">
+                <div class="card">
+                    <div class="card-title"><i class="fa-solid fa-gears"></i> Software, ERP & Productivity Tools</div>
+                    
+                    <div style="margin-bottom: 18px;">
+                        <h4 style="font-size: 0.88rem; color: #FFC107; margin-bottom: 8px;">
+                            <i class="fa-solid fa-database"></i> Enterprise Resource Planning (ERP) & Accounting
+                        </h4>
+                        <div class="badge-group">
+                            <span class="badge">SAP MM</span>
+                            <span class="badge">SAP PP</span>
+                            <span class="badge">Tally Prime</span>
+                            <span class="badge">Tally ERP</span>
+                            <span class="badge">Power Brain ERP</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 style="font-size: 0.88rem; color: #FFC107; margin-bottom: 8px;">
+                            <i class="fa-solid fa-laptop-code"></i> Data Analytics & Office Cloud Tools
+                        </h4>
+                        <div class="badge-group">
+                            <span class="badge">Microsoft 365 Online</span>
+                            <span class="badge">Google Sheets</span>
+                            <span class="badge">Data Visualization</span>
+                            <span class="badge">Stock Reconciliation</span>
+                            <span class="badge">MS Outlook</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title"><i class="fa-solid fa-list-check"></i> Core Expertise & Training</div>
+                    <div class="badge-group" style="margin-bottom: 15px;">
+                        <span class="badge">Local Purchase & Vendors</span>
+                        <span class="badge">Import & Foreign Suppliers</span>
+                        <span class="badge">Inventory & Store Control</span>
+                        <span class="badge">LC & Customs Clearance</span>
+                        <span class="badge">Cross-Department Coordination</span>
+                    </div>
+                    <ul class="bullets">
+                        <li>AI for Professionals (98 Hours)[cite: 1]</li>
+                        <li>Diploma in Accounting (6 Months)[cite: 1]</li>
+                        <li>Basic Computer Application (3 Months)[cite: 1]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 5: CONTACT CARD SECTION (Linked with Santosh-Bastola-CV.pdf) -->
+        <div id="contact-tab" class="tab-section">
+            <div class="contact-card-section" id="contact">
+                <div class="card-title" style="justify-content: center; font-size: 1.5rem;">
+                    <i class="fa-solid fa-address-card"></i> Contact & Downloads
+                </div>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+                    Feel free to reach out to me for professional inquiries, supply chain consulting, or download my official curriculum vitae.
+                </p>
+
+                <div class="contact-grid">
+                    <!-- Direct Link to Download PDF CV from GitHub Root -->
+                    <a href="Santosh-Bastola-CV.pdf" download="Santosh_Bastola_CV.pdf" class="contact-item">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span class="title">Curriculum Vitae</span>
+                        <span class="value">Download CV (PDF)</span>
+                    </a>
+
+                    <a href="https://wa.me/9779852021299?text=Hello%20Santosh,%20I%20saw%20your%20portfolio" target="_blank" class="contact-item wa">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span class="title">WhatsApp Direct</span>
+                        <span class="value">+977 9852021299[cite: 1]</span>
+                    </a>
+
+                    <a href="tel:9852021299" class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span class="title">Mobile Phone</span>
+                        <span class="value">+977 9852021299[cite: 1]</span>
+                    </a>
+
+                    <a href="mailto:bastolasantosh1993@outlook.com" class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span class="title">Email Address</span>
+                        <span class="value">bastolasantosh1993@outlook.com[cite: 1]</span>
+                    </a>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span class="title">Location</span>
+                        <span class="value">Biratnagar, Nepal[cite: 1]</span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-id-card"></i>
+                        <span class="title">Driving License</span>
+                        <span class="value">Category A & B[cite: 1]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 Santosh Bastola. All rights reserved.</p>
+        </footer>
+
     </div>
-    <div class="trust-row">
-      <div><strong>10+</strong><small>Years Experience</small></div>
-      <div><strong>100+</strong><small>Local Vendors</small></div>
-      <div><strong>50+</strong><small>International Vendors</small></div>
-    </div>
-  </div>
-  <div class="hero-visual reveal">
-    <div class="photo-frame">
-      <img src="profile.jpg" alt="Santosh Bastola — Inventory & Procurement Manager">
-      <div class="photo-shade"></div>
-      <div class="identity-card">
-        <span>BASED IN</span><strong>Biratnagar, Nepal</strong>
-        <span class="available"><i></i> Available within 1 month</span>
-      </div>
-    </div>
-    <div class="floating-chip chip-one">SAP MM</div>
-    <div class="floating-chip chip-two">SAP PP</div>
-    <div class="circle-text">INVENTORY • PROCUREMENT • ERP •</div>
-  </div>
-</section>
 
-<section class="marquee" aria-label="Areas of expertise">
-  <div>INVENTORY MANAGEMENT <b>✦</b> PROCUREMENT <b>✦</b> SUPPLY CHAIN <b>✦</b> SAP MM / PP <b>✦</b> LOGISTICS <b>✦</b> ERP <b>✦</b></div>
-</section>
+    <script>
+        // Tab Switcher Function
+        function showTab(tabId, btnElement) {
+            const sections = document.querySelectorAll('.tab-section');
+            sections.forEach(sec => sec.classList.remove('active'));
 
-<section class="section about" id="about">
-  <div class="section-tag">01 / PROFILE</div>
-  <div class="split">
-    <div><h2>Experience that connects <em>every department.</em></h2></div>
-    <div class="copy">
-      <p>Experienced Inventory & Procurement Manager with more than 10 years of professional experience in manufacturing and trading industries.</p>
-      <p>Started in Operations and Accounts, gaining practical knowledge of Tally accounting, VAT billing, vendor ledgers, payment collection, banking records and business operations. Progressed into inventory and procurement leadership with strong exposure to manufacturing operations, supply chain coordination, production support, ERP systems, vendor management and imports.</p>
-      <p>Experienced in SAP MM and SAP PP, Tally Prime and Power Brain ERP for procurement, inventory transactions, production information, material movement and reporting.</p>
-    </div>
-  </div>
-</section>
+            const navBtns = document.querySelectorAll('.nav-tab-btn');
+            navBtns.forEach(btn => btn.classList.remove('active'));
 
-<section class="section dark" id="expertise">
-  <div class="section-tag">02 / EXPERTISE</div>
-  <div class="section-title-row"><h2>Core <em>capabilities.</em></h2><p>Practical skills developed through day-to-day manufacturing and supply-chain operations.</p></div>
-  <div class="expertise-grid">
-    <article><span>01</span><h3>Inventory & Stock Control</h3><p>Receiving, issuing, stock movement, physical verification, accuracy and raw-material/finished-goods control.</p></article>
-    <article><span>02</span><h3>Procurement Management</h3><p>Planning, purchase orders, supplier coordination, negotiation, delivery follow-up and material availability.</p></article>
-    <article><span>03</span><h3>SAP MM & SAP PP</h3><p>Procurement, material management, inventory transactions, production information and material planning support.</p></article>
-    <article><span>04</span><h3>Supply Chain Operations</h3><p>Coordination between purchase, store, production, accounts, logistics and management.</p></article>
-    <article><span>05</span><h3>Import & Logistics</h3><p>LC, RTGS, customs documentation, freight forwarding and air & sea transportation coordination.</p></article>
-    <article><span>06</span><h3>ERP & Reporting</h3><p>Accurate inventory and production databases, operational reports and management information.</p></article>
-  </div>
-</section>
+            document.getElementById(tabId).classList.add('active');
+            btnElement.classList.add('active');
+        }
 
-<section class="section experience" id="experience">
-  <div class="section-tag">03 / CAREER</div>
-  <div class="section-title-row"><h2>Career <em>timeline.</em></h2><p>A progression from operations and accounts into inventory, procurement and supply-chain management.</p></div>
-  <div class="timeline">
-    <article class="timeline-item current reveal"><div class="date">DEC 2023 — PRESENT</div><div><span class="role">INVENTORY & PROCUREMENT MANAGER</span><h3>Golyan Group — Shivam Plastic Industry Limited</h3><p>Daily inventory and stock control, procurement planning, raw-material availability, SAP MM and SAP PP activities, material receipt/consumption/stock movement, production records, reporting and cross-functional coordination.</p></div></article>
-    <article class="timeline-item reveal"><div class="date">JAN 2022 — DEC 2023</div><div><span class="role">INVENTORY & PROCUREMENT MANAGER</span><h3>Maa Jagadamba Plasto Udyog & Metal Industries Pvt. Ltd.</h3><p>Inventory control, production database, procurement and supplier coordination, import documentation, LC processes, customs clearance documentation, Power Brain ERP and operational reporting.</p></div></article>
-    <article class="timeline-item reveal"><div class="date">SEP 2015 — DEC 2022</div><div><span class="role">INVENTORY & PROCUREMENT MANAGER</span><h3>Shivam Organization — Shivam Footwears Pvt. Ltd.</h3><p>Inventory and warehouse operations, local and international procurement, purchase orders, vendor negotiation, production tracking, ERP records, LC/RTGS, import documentation, customs and air/sea transportation coordination.</p></div></article>
-    <article class="timeline-item reveal"><div class="date">2012 — 2015</div><div><span class="role">OPERATIONS & ACCOUNTS ASSISTANT</span><h3>New GS Mobile Palace</h3><p>Daily operations and accounting activities, VAT billing, Tally transactions, vendor ledgers, payment collection, bank deposits, purchase/sales/stock records and reporting.</p></div></article>
-  </div>
-</section>
+        // Theme Switcher
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const themeIcon = document.getElementById('themeIcon');
+        const themeText = document.getElementById('themeText');
+        const htmlElement = document.documentElement;
 
-<section class="numbers" id="highlights">
-  <div class="number"><strong>100+</strong><span>Local vendors managed</span><small>Annual transactions approx. NPR 80–90 Lakhs</small></div>
-  <div class="number"><strong>50+</strong><span>International vendors</span><small>India and third countries</small></div>
-  <div class="number"><strong>$20K–25K</strong><span>International transactions</span><small>Approximate handled value</small></div>
-  <div class="number"><strong>4</strong><span>Core business platforms</span><small>SAP MM, SAP PP, Tally Prime, Power Brain ERP</small></div>
-</section>
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                htmlElement.setAttribute('data-theme', 'light');
+                themeIcon.className = 'fa-solid fa-sun';
+                themeText.textContent = 'Dark Mode';
+            } else {
+                htmlElement.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fa-solid fa-moon';
+                themeText.textContent = 'Light Mode';
+            }
+        });
 
-<section class="section operating">
-  <div class="section-tag">04 / HOW I WORK</div>
-  <div class="split">
-    <div><h2>One flow from <em>purchase to production.</em></h2></div>
-    <div class="flow">
-      <div><b>01</b><span>Purchase</span><p>Supplier coordination, negotiation and purchase process.</p></div>
-      <div><b>02</b><span>Store</span><p>Receiving, issuing, stock monitoring and records.</p></div>
-      <div><b>03</b><span>Production</span><p>Material availability, production information and tracking.</p></div>
-      <div><b>04</b><span>Logistics</span><p>Import, customs, freight and transportation coordination.</p></div>
-      <div><b>05</b><span>Management</span><p>Accurate reporting and operational information for decisions.</p></div>
-    </div>
-  </div>
-</section>
+        // Animated Number Counter
+        const counters = document.querySelectorAll('.counter');
+        const speed = 40;
 
-<section class="section dark education">
-  <div class="section-tag">05 / EDUCATION & TRAINING</div>
-  <div class="split">
-    <div><h2>Learning that supports <em>execution.</em></h2></div>
-    <div class="edu-list">
-      <div><span>DEGREE</span><h3>Bachelor of Business Studies (BBS)</h3><p>Tribhuvan University (TU) — Birat Campus, Biratnagar</p></div>
-      <div><span>MANAGEMENT</span><h3>10+2 (Management)</h3><p>Higher Secondary Education Board — City Higher Secondary School, Biratnagar</p></div>
-      <div><span>TRAINING</span><h3>Professional Training</h3><p>AI for Professional — 98 Hours · Diploma in Accounting — 6 Months · Basic Computer Application — 3 Months</p></div>
-    </div>
-  </div>
-</section>
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText.replace('+', '');
+                const inc = Math.ceil(target / speed);
 
-<section class="section contact" id="contact">
-  <div class="section-tag">06 / CONTACT</div>
-  <div class="contact-wrap">
-    <div><div class="kicker"><i></i> AVAILABLE FOR OPPORTUNITIES</div><h2>Let's build the <em>next chapter.</em></h2></div>
-    <div class="contact-actions">
-      <a href="mailto:bastolasantosh1993@outlook.com" class="contact-link">bastolasantosh1993@outlook.com</a>
-      <a href="tel:+9779852021299" class="contact-link">+977 9852021299</a>
-      <div class="buttons">
-        <a class="button button-dark" href="https://wa.me/9779852021299?text=Hello%20Santosh%2C%20I%20visited%20your%20professional%20portfolio." target="_blank" rel="noopener">WhatsApp <span>↗</span></a>
-        <a class="button button-dark-outline" href="mailto:bastolasantosh1993@outlook.com?subject=Professional%20Opportunity">Email Me <span>↗</span></a>
-      </div>
-      <p>Biratnagar, Nepal · Available to join within 1 month</p>
-    </div>
-  </div>
-</section>
-</main>
-
-<footer><span>© 2026 Santosh Bastola</span><span>Inventory · Procurement · Supply Chain · ERP</span><a href="#top">Back to top ↑</a></footer>
-<div class="toast" role="status" aria-live="polite">Welcome to Santosh Bastola's portfolio.</div>
-<script src="script.js"></script>
+                if (count < target) {
+                    counter.innerText = (count + inc > target ? target : count + inc) + "+";
+                    setTimeout(updateCount, 40);
+                } else {
+                    counter.innerText = target + "+";
+                }
+            };
+            updateCount();
+        });
+    </script>
 </body>
 </html>
