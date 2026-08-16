@@ -4,37 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santosh Bastola | Executive Portfolio & CV</title>
+    <meta name="description" content="Santosh Bastola - Procurement, Import & Inventory Operations Lead with over 10 years of experience in manufacturing and supply chain management.">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg: #07090e;
-            --card-bg: #0d1322;
-            --card-border: #1a233a;
-            --text-main: #f1f5f9;
-            --text-muted: #8b9bb4;
-            --gold-gradient: linear-gradient(135deg, #FFD54F 0%, #FF8F00 50%, #EF6C00 100%);
-            --gold-text: linear-gradient(to right, #FFE082, #FFB300, #FFA000);
-            --whatsapp: #25D366;
-            --badge-bg: #141f36;
-            --badge-text: #cbd5e1;
-            --hero-bg: linear-gradient(135deg, #0d1322 0%, #15100a 100%);
-            --shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.4);
+            --bg: #030712;
+            --card-bg: rgba(13, 19, 34, 0.75);
+            --card-border: rgba(255, 179, 0, 0.15);
+            --card-border-hover: rgba(255, 179, 0, 0.6);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --gold-gradient: linear-gradient(135deg, #FDE047 0%, #F59E0B 50%, #D97706 100%);
+            --gold-text: linear-gradient(to right, #FEF08A, #FBBF24, #F59E0B);
+            --whatsapp: #22c55e;
+            --badge-bg: rgba(255, 179, 0, 0.08);
+            --badge-text: #FBBF24;
+            --hero-bg: linear-gradient(135deg, rgba(13, 19, 34, 0.9) 0%, rgba(20, 10, 2, 0.9) 100%);
+            --shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+            --glow: 0 0 30px rgba(245, 158, 11, 0.12);
         }
 
         [data-theme="light"] {
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --card-border: #e2e8f0;
+            --bg: #f1f5f9;
+            --card-bg: rgba(255, 255, 255, 0.85);
+            --card-border: rgba(217, 119, 6, 0.2);
+            --card-border-hover: rgba(217, 119, 6, 0.6);
             --text-main: #0f172a;
-            --text-muted: #64748b;
-            --gold-gradient: linear-gradient(135deg, #F59E0B 0%, #B45309 100%);
+            --text-muted: #475569;
+            --gold-gradient: linear-gradient(135deg, #D97706 0%, #B45309 100%);
             --gold-text: linear-gradient(to right, #B45309, #D97706, #92400E);
-            --whatsapp: #25D366;
-            --badge-bg: #f1f5f9;
-            --badge-text: #334155;
-            --hero-bg: linear-gradient(135deg, #ffffff 0%, #fffbeb 100%);
-            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            --whatsapp: #16a34a;
+            --badge-bg: rgba(217, 119, 6, 0.08);
+            --badge-text: #B45309;
+            --hero-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(254, 243, 199, 0.6) 100%);
+            --shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.08);
+            --glow: 0 0 25px rgba(217, 119, 6, 0.1);
         }
 
         * {
@@ -42,7 +47,7 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         body {
@@ -50,6 +55,8 @@
             color: var(--text-main);
             line-height: 1.6;
             padding: 25px 15px;
+            background-image: radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.04) 0%, transparent 60%);
+            background-attachment: fixed;
         }
 
         .container {
@@ -57,28 +64,29 @@
             margin: 0 auto;
         }
 
-        /* Top Navigation Bar */
+        /* Top Navigation Bar with Glassmorphism */
         .top-nav {
             position: sticky;
-            top: 10px;
+            top: 15px;
             z-index: 900;
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 40px;
-            padding: 10px 20px;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 50px;
+            padding: 10px 22px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             box-shadow: var(--shadow);
-            backdrop-filter: blur(10px);
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 12px;
         }
 
         .nav-links {
             display: flex;
-            gap: 8px;
+            gap: 6px;
             list-style: none;
             flex-wrap: wrap;
         }
@@ -89,70 +97,73 @@
             color: var(--text-main);
             font-size: 0.85rem;
             font-weight: 600;
-            padding: 8px 16px;
-            border-radius: 20px;
+            padding: 9px 18px;
+            border-radius: 30px;
             cursor: pointer;
-            transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
         .nav-tab-btn:hover, .nav-tab-btn.active {
-            background: rgba(255, 179, 0, 0.15);
-            color: #FFB300;
-            border: 1px solid rgba(255, 179, 0, 0.4);
+            background: var(--badge-bg);
+            color: #F59E0B;
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
         }
 
         .theme-toggle-btn {
-            background: transparent;
+            background: var(--badge-bg);
             border: 1px solid var(--card-border);
             color: var(--text-main);
-            padding: 6px 14px;
+            padding: 8px 16px;
             border-radius: 30px;
             cursor: pointer;
             font-size: 0.85rem;
             font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
         }
 
         .theme-toggle-btn:hover {
-            border-color: #FFB300;
-            color: #FFB300;
+            border-color: #F59E0B;
+            color: #F59E0B;
+            transform: translateY(-2px);
         }
 
         /* Header / Hero Section */
         .hero {
             background: var(--hero-bg);
             border: 1px solid var(--card-border);
+            backdrop-filter: blur(10px);
             padding: 40px;
-            border-radius: 24px;
+            border-radius: 28px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 25px;
-            margin-bottom: 25px;
-            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            box-shadow: var(--shadow), var(--glow);
         }
 
         .hero-left {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 28px;
             flex-wrap: wrap;
         }
 
         .profile-img-wrap {
-            width: 130px;
-            height: 130px;
+            width: 135px;
+            height: 135px;
             border-radius: 50%;
-            padding: 4px;
+            padding: 5px;
             background: var(--gold-gradient);
             flex-shrink: 0;
-            box-shadow: 0 0 25px rgba(255, 179, 0, 0.25);
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.3);
         }
 
         .profile-img-wrap img {
@@ -164,7 +175,7 @@
         }
 
         .hero-text h1 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             font-weight: 800;
             background: var(--gold-text);
             -webkit-background-clip: text;
@@ -173,52 +184,72 @@
         }
 
         .hero-text p {
-            color: #FFB300;
+            color: #F59E0B;
             font-weight: 700;
-            font-size: 1.1rem;
-            margin-top: 4px;
+            font-size: 1.12rem;
+            margin-top: 6px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
         }
 
         .hero-badge {
-            background: rgba(255, 179, 0, 0.1);
-            border: 1px solid rgba(255, 179, 0, 0.3);
-            color: #FFB300;
-            padding: 8px 16px;
-            border-radius: 12px;
-            font-size: 0.85rem;
+            background: var(--badge-bg);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: #F59E0B;
+            padding: 10px 18px;
+            border-radius: 14px;
+            font-size: 0.88rem;
             font-weight: 700;
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.1);
         }
 
         /* Key Metrics / Highlights */
         .stats-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
             gap: 20px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         .stat-box {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            padding: 24px 20px;
-            border-radius: 18px;
+            backdrop-filter: blur(10px);
+            padding: 26px 20px;
+            border-radius: 20px;
             box-shadow: var(--shadow);
             text-align: center;
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-box::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gold-gradient);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
 
         .stat-box:hover {
-            transform: translateY(-4px);
-            border-color: #FFB300;
+            transform: translateY(-5px);
+            border-color: var(--card-border-hover);
+            box-shadow: var(--shadow), var(--glow);
+        }
+
+        .stat-box:hover::after {
+            opacity: 1;
         }
 
         .stat-box h3 {
-            font-size: 2.2rem;
+            font-size: 2.3rem;
             font-weight: 800;
             background: var(--gold-text);
             -webkit-background-clip: text;
@@ -227,21 +258,21 @@
 
         .stat-box p.stat-title {
             color: var(--text-main);
-            font-size: 0.95rem;
+            font-size: 0.98rem;
             font-weight: 700;
-            margin-top: 4px;
+            margin-top: 6px;
         }
 
         .stat-box p.stat-sub {
             color: var(--text-muted);
-            font-size: 0.82rem;
-            margin-top: 3px;
+            font-size: 0.84rem;
+            margin-top: 4px;
         }
 
         /* SECTION VISIBILITY CONTROL */
         .tab-section {
             display: none;
-            animation: fadeIn 0.4s ease-in-out;
+            animation: fadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .tab-section.active {
@@ -249,7 +280,7 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
+            from { opacity: 0; transform: translateY(12px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
@@ -257,16 +288,17 @@
         .card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            padding: 32px;
-            border-radius: 22px;
-            margin-bottom: 25px;
+            backdrop-filter: blur(12px);
+            padding: 35px;
+            border-radius: 24px;
+            margin-bottom: 30px;
             box-shadow: var(--shadow);
         }
 
         .card-title {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             font-weight: 700;
-            margin-bottom: 22px;
+            margin-bottom: 24px;
             display: flex;
             align-items: center;
             gap: 12px;
@@ -274,58 +306,59 @@
         }
 
         .card-title i {
-            color: #FFB300;
+            color: #F59E0B;
+            font-size: 1.2rem;
         }
 
         .summary-p {
             color: var(--text-muted);
-            font-size: 0.98rem;
-            margin-bottom: 14px;
+            font-size: 1rem;
+            margin-bottom: 16px;
             text-align: justify;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         /* Main Current Role Box */
         .main-top-box {
-            background: linear-gradient(135deg, var(--card-bg) 0%, rgba(255, 179, 0, 0.08) 100%);
-            border: 2px solid rgba(255, 179, 0, 0.5);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 0 25px rgba(255, 179, 0, 0.12);
+            background: linear-gradient(135deg, var(--card-bg) 0%, rgba(245, 158, 11, 0.06) 100%);
+            border: 2px solid rgba(245, 158, 11, 0.4);
+            border-radius: 22px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.1);
         }
 
         .top-badge {
-            background: #FFB300;
-            color: #000;
-            font-size: 0.75rem;
+            background: var(--gold-gradient);
+            color: #030712;
+            font-size: 0.78rem;
             font-weight: 800;
-            padding: 5px 12px;
+            padding: 6px 14px;
             border-radius: 20px;
             text-transform: uppercase;
             display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             letter-spacing: 0.5px;
         }
 
-        .role-title { color: var(--text-main); font-weight: 800; font-size: 1.25rem; margin-bottom: 2px; }
-        .institution-name { color: #FFB300; font-weight: 700; font-size: 1.1rem; }
-        .sub-details { color: var(--text-muted); font-size: 0.88rem; margin-top: 4px; display: flex; align-items: center; gap: 6px; }
+        .role-title { color: var(--text-main); font-weight: 800; font-size: 1.3rem; margin-bottom: 4px; }
+        .institution-name { color: #F59E0B; font-weight: 700; font-size: 1.12rem; }
+        .sub-details { color: var(--text-muted); font-size: 0.9rem; margin-top: 6px; display: flex; align-items: center; gap: 8px; }
 
         .up-arrow-divider {
             text-align: center;
-            margin: 22px 0;
-            color: #FFB300;
+            margin: 25px 0;
+            color: #F59E0B;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 4px;
+            gap: 6px;
         }
 
         .up-arrow-divider span { 
-            font-size: 0.72rem; 
+            font-size: 0.75rem; 
             color: var(--text-muted); 
             text-transform: uppercase; 
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
             font-weight: 700;
         }
 
@@ -333,128 +366,135 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 14px 0;
-            color: #FFB300;
-            font-size: 1.3rem;
+            margin: 16px 0;
+            color: #F59E0B;
+            font-size: 1.4rem;
         }
 
         .flow-vertical-stack {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 18px;
         }
 
         .edu-two-col-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-bottom: 20px;
+            gap: 22px;
+            margin-bottom: 22px;
         }
 
         .step-box {
             background: var(--bg);
             border: 1px solid var(--card-border);
-            padding: 24px;
-            border-radius: 18px;
+            padding: 26px;
+            border-radius: 20px;
             width: 100%;
-            transition: border-color 0.3s ease, transform 0.3s ease;
         }
 
         .step-box:hover { 
-            border-color: #FFB300; 
-            transform: translateY(-3px); 
+            border-color: var(--card-border-hover); 
+            transform: translateY(-4px); 
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
-        .step-num { display: inline-block; font-size: 0.72rem; font-weight: 800; color: #FFB300; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px; }
+        .step-num { display: inline-block; font-size: 0.75rem; font-weight: 800; color: #F59E0B; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px; }
 
         ul.resp-list {
             list-style: none;
-            font-size: 0.92rem;
+            font-size: 0.94rem;
             color: var(--text-muted);
-            margin-top: 14px;
-            padding-top: 12px;
+            margin-top: 16px;
+            padding-top: 14px;
             border-top: 1px dashed var(--card-border);
         }
 
         ul.resp-list li {
             position: relative;
-            padding-left: 20px;
-            margin-bottom: 10px;
-            line-height: 1.6;
+            padding-left: 22px;
+            margin-bottom: 12px;
+            line-height: 1.65;
         }
 
         ul.resp-list li::before {
             content: '▪';
             position: absolute;
             left: 0;
-            color: #FFB300;
-            font-size: 1.1rem;
+            color: #F59E0B;
+            font-size: 1.2rem;
             line-height: 1;
         }
 
         .grid-two-col {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 25px;
+            gap: 28px;
         }
 
-        .badge-group { display: flex; flex-wrap: wrap; gap: 8px; }
+        .badge-group { display: flex; flex-wrap: wrap; gap: 10px; }
         .badge {
             background: var(--badge-bg);
             color: var(--badge-text);
-            padding: 8px 14px;
+            padding: 9px 16px;
             border-radius: 30px;
-            font-size: 0.82rem;
+            font-size: 0.85rem;
             font-weight: 600;
             border: 1px solid var(--card-border);
         }
+        .badge:hover {
+            border-color: #F59E0B;
+            transform: translateY(-2px);
+        }
 
-        ul.bullets { list-style: none; font-size: 0.9rem; color: var(--text-muted); }
-        ul.bullets li { position: relative; padding-left: 20px; margin-bottom: 10px; }
-        ul.bullets li::before { content: '▪'; position: absolute; left: 0; color: #FFB300; font-size: 1.1rem; }
+        ul.bullets { list-style: none; font-size: 0.92rem; color: var(--text-muted); }
+        ul.bullets li { position: relative; padding-left: 22px; margin-bottom: 12px; }
+        ul.bullets li::before { content: '▪'; position: absolute; left: 0; color: #F59E0B; font-size: 1.2rem; }
 
         /* Contact Section */
         .contact-card-section {
             background: var(--card-bg);
-            border: 2px solid rgba(255, 179, 0, 0.4);
-            padding: 35px;
-            border-radius: 24px;
+            border: 2px solid rgba(245, 158, 11, 0.4);
+            padding: 40px;
+            border-radius: 26px;
             text-align: center;
-            box-shadow: 0 0 25px rgba(255, 179, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(245, 158, 11, 0.12);
         }
 
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 25px;
+            gap: 22px;
+            margin-top: 28px;
         }
 
         .contact-item {
             background: var(--bg);
             border: 1px solid var(--card-border);
-            padding: 24px 15px;
-            border-radius: 18px;
+            padding: 26px 16px;
+            border-radius: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 10px;
             text-decoration: none;
             color: var(--text-main);
-            transition: all 0.3s ease;
             cursor: pointer;
         }
 
-        .contact-item:hover { border-color: #FFB300; transform: translateY(-4px); }
-        .contact-item i { font-size: 1.8rem; color: #FFB300; }
+        .contact-item:hover { 
+            border-color: #F59E0B; 
+            transform: translateY(-5px); 
+            box-shadow: 0 12px 25px rgba(245, 158, 11, 0.2); 
+        }
+        .contact-item i { font-size: 1.9rem; color: #F59E0B; }
         .contact-item.wa i { color: var(--whatsapp); }
 
-        .contact-item span.title { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
+        .contact-item span.title { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
         
         .contact-item span.value { 
             font-weight: 700; 
-            font-size: 0.88rem; 
+            font-size: 0.9rem; 
             display: block;
             width: 100%;
             word-break: break-all;
@@ -462,7 +502,13 @@
             line-height: 1.4;
         }
 
-        footer { text-align: center; margin-top: 25px; color: var(--text-muted); font-size: 0.85rem; }
+        /* Highlighted CV Download Card */
+        .contact-item.highlight-cv {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, var(--bg) 100%);
+            border: 2px solid #F59E0B;
+        }
+
+        footer { text-align: center; margin-top: 30px; color: var(--text-muted); font-size: 0.88rem; }
 
         @media (max-width: 900px) {
             .contact-grid { grid-template-columns: repeat(2, 1fr); }
@@ -497,7 +543,7 @@
 
             <button class="theme-toggle-btn" id="themeToggleBtn">
                 <i class="fa-solid fa-moon" id="themeIcon"></i>
-                <span id="themeText">Light Mode</span>
+                <span id="themeText">Polar Light</span>
             </button>
         </div>
 
@@ -578,7 +624,7 @@
 
                 <!-- ARROW DIVIDER -->
                 <div class="up-arrow-divider">
-                    <i class="fa-solid fa-circle-arrow-down" style="font-size: 1.6rem; color: #FFB300;"></i>
+                    <i class="fa-solid fa-circle-arrow-down" style="font-size: 1.6rem; color: #F59E0B;"></i>
                     <span>Prior Leadership Positions</span>
                 </div>
 
@@ -586,8 +632,8 @@
                 <div class="flow-vertical-stack">
                     <div class="step-box">
                         <span class="step-num">Step 3 (2022 - 2023)</span>
-                        <h4 style="font-size: 1.05rem; color: var(--text-main); font-weight: 800;">Materials & Supply Chain Head</h4>
-                        <p style="color: #FFB300; font-weight: 700; font-size: 0.9rem;">Maa Jagadamba Plasto Udyog</p>
+                        <h4 style="font-size: 1.08rem; color: var(--text-main); font-weight: 800;">Materials & Supply Chain Head</h4>
+                        <p style="color: #F59E0B; font-weight: 700; font-size: 0.92rem;">Maa Jagadamba Plasto Udyog</p>
                         
                         <ul class="resp-list">
                             <li>Directed comprehensive inventory control frameworks, material movement pipelines, and production entries using Power Brain ERP.</li>
@@ -602,8 +648,8 @@
 
                     <div class="step-box">
                         <span class="step-num">Step 2 (2015 - 2022)</span>
-                        <h4 style="font-size: 1.05rem; color: var(--text-main); font-weight: 800;">Supply Chain & Procurement Lead</h4>
-                        <p style="color: #FFB300; font-weight: 700; font-size: 0.9rem;">Shivam Footwears Pvt. Ltd.</p>
+                        <h4 style="font-size: 1.08rem; color: var(--text-main); font-weight: 800;">Supply Chain & Procurement Lead</h4>
+                        <p style="color: #F59E0B; font-weight: 700; font-size: 0.92rem;">Shivam Footwears Pvt. Ltd.</p>
                         
                         <ul class="resp-list">
                             <li>Managed end-to-end procurement operations partnering with 100+ local vendors and 50+ foreign suppliers.</li>
@@ -618,8 +664,8 @@
 
                     <div class="step-box">
                         <span class="step-num">Step 1 (2012 - 2015)</span>
-                        <h4 style="font-size: 1.05rem; color: var(--text-main); font-weight: 800;">Operations & Accounts Assistant</h4>
-                        <p style="color: #FFB300; font-weight: 700; font-size: 0.9rem;">New GS Mobile Palace</p>
+                        <h4 style="font-size: 1.08rem; color: var(--text-main); font-weight: 800;">Operations & Accounts Assistant</h4>
+                        <p style="color: #F59E0B; font-weight: 700; font-size: 0.92rem;">New GS Mobile Palace</p>
                         
                         <ul class="resp-list">
                             <li>Executed day-to-day point-of-sale store operations, financial bookkeeping, and VAT documentation.</li>
@@ -639,21 +685,21 @@
                 <div class="edu-two-col-grid">
                     <div class="step-box">
                         <span class="step-num">Secondary Level</span>
-                        <h4 style="font-size: 1.05rem; color: var(--text-main); font-weight: 800;">School Leaving Certificate (SLC)</h4>
-                        <p style="color: #FFB300; font-weight: 700; font-size: 0.9rem;">Saraswati Higher Sec. School</p>
-                        <span class="sub-details" style="font-size: 0.8rem; margin-top: 6px;"><i class="fa-solid fa-location-dot"></i> Nepal Board</span>
+                        <h4 style="font-size: 1.08rem; color: var(--text-main); font-weight: 800;">School Leaving Certificate (SLC)</h4>
+                        <p style="color: #F59E0B; font-weight: 700; font-size: 0.92rem;">Saraswati Higher Sec. School</p>
+                        <span class="sub-details" style="font-size: 0.82rem; margin-top: 6px;"><i class="fa-solid fa-location-dot"></i> Nepal Board</span>
                     </div>
 
                     <div class="step-box">
                         <span class="step-num">Higher Secondary</span>
-                        <h4 style="font-size: 1.05rem; color: var(--text-main); font-weight: 800;">10+2 in Management</h4>
-                        <p style="color: #FFB300; font-weight: 700; font-size: 0.9rem;">City Higher Sec. School</p>
-                        <span class="sub-details" style="font-size: 0.8rem; margin-top: 6px;"><i class="fa-solid fa-location-dot"></i> HSEB Board</span>
+                        <h4 style="font-size: 1.08rem; color: var(--text-main); font-weight: 800;">10+2 in Management</h4>
+                        <p style="color: #F59E0B; font-weight: 700; font-size: 0.92rem;">City Higher Sec. School</p>
+                        <span class="sub-details" style="font-size: 0.82rem; margin-top: 6px;"><i class="fa-solid fa-location-dot"></i> HSEB Board</span>
                     </div>
                 </div>
 
                 <div class="up-arrow-divider">
-                    <i class="fa-solid fa-circle-arrow-down" style="font-size: 1.6rem; color: #FFB300;"></i>
+                    <i class="fa-solid fa-circle-arrow-down" style="font-size: 1.6rem; color: #F59E0B;"></i>
                     <span>University Graduation Path</span>
                 </div>
 
@@ -672,8 +718,8 @@
                 <div class="card">
                     <div class="card-title"><i class="fa-solid fa-laptop-code"></i> Enterprise Systems & Tools</div>
                     
-                    <div style="margin-bottom: 20px;">
-                        <h4 style="font-size: 0.88rem; color: #FFB300; margin-bottom: 10px; font-weight: 700;">
+                    <div style="margin-bottom: 22px;">
+                        <h4 style="font-size: 0.9rem; color: #F59E0B; margin-bottom: 12px; font-weight: 700;">
                             <i class="fa-solid fa-database"></i> ERP Platforms & Financial Systems
                         </h4>
                         <div class="badge-group">
@@ -686,7 +732,7 @@
                     </div>
 
                     <div>
-                        <h4 style="font-size: 0.88rem; color: #FFB300; margin-bottom: 10px; font-weight: 700;">
+                        <h4 style="font-size: 0.9rem; color: #F59E0B; margin-bottom: 12px; font-weight: 700;">
                             <i class="fa-solid fa-chart-line"></i> Cloud Collaboration & Analytics
                         </h4>
                         <div class="badge-group">
@@ -700,14 +746,14 @@
 
                 <div class="card">
                     <div class="card-title"><i class="fa-solid fa-certificate"></i> Domain Expertise & Certifications</div>
-                    <div class="badge-group" style="margin-bottom: 18px;">
+                    <div class="badge-group" style="margin-bottom: 20px;">
                         <span class="badge">Strategic Procurement</span>
                         <span class="badge">Import & LC Documentation</span>
                         <span class="badge">Customs Clearance</span>
                         <span class="badge">Vendor Relationship</span>
                         <span class="badge">Cross-Department Leadership</span>
                     </div>
-                    <h4 style="font-size: 0.88rem; color: #FFB300; margin-bottom: 10px; font-weight: 700;">Professional Certifications</h4>
+                    <h4 style="font-size: 0.9rem; color: #F59E0B; margin-bottom: 12px; font-weight: 700;">Professional Certifications</h4>
                     <ul class="bullets">
                         <li>AI for Professionals (98 Hours Intensive)</li>
                         <li>Diploma in Accounting (6 Months Professional Course)</li>
@@ -723,13 +769,13 @@
                 <div class="card-title" style="justify-content: center; font-size: 1.4rem;">
                     <i class="fa-solid fa-address-card"></i> Professional Inquiries & Connections
                 </div>
-                <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto; font-size: 0.95rem;">
+                <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto; font-size: 0.98rem;">
                     Open to leadership opportunities in supply chain management, procurement operations, and enterprise logistics. Download my official CV or get in touch directly.
                 </p>
 
                 <div class="contact-grid">
-                    <a href="Santosh-Bastola-CV.pdf" download="Santosh_Bastola_CV.pdf" class="contact-item">
-                        <i class="fa-solid fa-file-arrow-down"></i>
+                    <a href="Santosh-Bastola-CV.pdf" download="Santosh_Bastola_CV.pdf" class="contact-item highlight-cv">
+                        <i class="fa-solid fa-file-arrow-down" style="color: #F59E0B;"></i>
                         <span class="title">Curriculum Vitae</span>
                         <span class="value">Download CV (PDF)</span>
                     </a>
@@ -786,7 +832,7 @@
             btnElement.classList.add('active');
         }
 
-        // Theme Switcher Logic
+        // Theme Switcher Logic (Midnight Dark & Polar Light)
         const themeToggleBtn = document.getElementById('themeToggleBtn');
         const themeIcon = document.getElementById('themeIcon');
         const themeText = document.getElementById('themeText');
@@ -797,11 +843,11 @@
             if (currentTheme === 'dark') {
                 htmlElement.setAttribute('data-theme', 'light');
                 themeIcon.className = 'fa-solid fa-sun';
-                themeText.textContent = 'Dark Mode';
+                themeText.textContent = 'Midnight Dark';
             } else {
                 htmlElement.setAttribute('data-theme', 'dark');
                 themeIcon.className = 'fa-solid fa-moon';
-                themeText.textContent = 'Light Mode';
+                themeText.textContent = 'Polar Light';
             }
         });
     </script>
